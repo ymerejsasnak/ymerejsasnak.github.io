@@ -8,11 +8,11 @@ First, as part of my capstone project for my degree, I present to you my code re
 
 Next, let me direct you to the first of those artifacts, a simple REST API for performing CRUD operations on a MongoDB database:
 
-https://github.com/ymerejsasnak/clientserver
+[Client/Server code](https://github.com/ymerejsasnak/clientserver)
 
 A narrative on why I chose this item, what enhancements I made, and what I learned can be found here (warning: .odt file):
 
-https://github.com/ymerejsasnak/clientserver/blob/master/jeremykansas.cs499.cat1narrative.odt
+[Client/Server narrative](https://github.com/ymerejsasnak/clientserver/blob/master/jeremykansas.cs499.cat1narrative.odt)
 
 
 
