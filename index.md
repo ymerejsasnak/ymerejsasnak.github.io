@@ -10,6 +10,9 @@ Next, let me direct you to the first of those artifacts, a simple REST API for p
 
 https://github.com/ymerejsasnak/clientserver
 
+A narrative on why I chose this item, what enhancements I made, and what I learned can be found here (warning: .odt file):
+
+https://github.com/ymerejsasnak/clientserver/blob/master/jeremykansas.cs499.cat1narrative.odt
 
 
 
@@ -17,4 +20,5 @@ https://github.com/ymerejsasnak/clientserver
 
 
 *(there are many more projects on my github that I would like to highlight in the future...)*
+
 *(also I will post links to my published Voltage Modular modules once I am able, but I will not be sharing the code for these...)*
