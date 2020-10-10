@@ -14,7 +14,13 @@ A narrative on why I chose this item, what enhancements I made, and what I learn
 
 [Client/Server narrative](https://github.com/ymerejsasnak/clientserver/blob/master/jeremykansas.cs499.cat1narrative.odt)
 
+Next we have the second artifact, a script for pulling data from a RaspberryPi with attached GrovePi, and a hash table for storing the data for quick lookup:
 
+[WetSpec and Hash Table](https://github.com/ymerejsasnak/wetspec-script)
+
+And again, a temporary link to the narrative .odt file, until I am able to update this text here instead:
+
+[Hash Table Narrative](https://github.com/ymerejsasnak/wetspec-script/blob/master/jeremykansas.cs499.cat2narrative.odt)
 
 
 
