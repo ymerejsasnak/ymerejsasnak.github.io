@@ -1,4 +1,3 @@
-# Jeremy Kansas
 ## Welcome to my Portfolio
 *...a perpetual work in progress...*
 
