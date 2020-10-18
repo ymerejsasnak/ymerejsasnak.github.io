@@ -1,8 +1,6 @@
 ## Welcome to my Portfolio
 *...a perpetual work in progress...*
 
----
-
 As I look back over my Bachelor of Science in Computer Science coursework, I realize I have learned a great variety of different concepts and skills. Despite this, I think the most important lessons are more general than any self-contained computer science topic as these are things I learned about myself, about my interests and goals and values. For one, through the variety of assignments and classes, I found my love of problem solving challenged and ultimately reaffirmed. Whether it be reconstructing C code from a disassembled binary, or manipulating vectors in order to build shaders for OpenGL graphics, or coding a successful merge sort, I still find that if I am presented with the logical building blocks, so to speak, I love nothing more than to find a way to fit them together to solve the problem at hand. At the same time, I’ve developed my ability to relate the piece of whatever puzzle I am currently dealing with to the bigger picture, the end goal.
 
 Beyond this I’ve also had ample opportunity to exercise my thirst for knowledge. While common wisdom often tells us to specialize, to focus on an area of expertise, I can’t help but be more of a generalist. Still, I think my inherently interdisciplinary nature has its own value, which is too often overlooked. Not just in computer science – where my interests range from artificial intelligence, to games and graphics programming, to creativity and education software, to an emerging interest in legacy systems and embedded systems, to mathematics – but I also have a long-standing and deep-seated love and respect for topics in art, history, literature, music, psychology, and so much more. Coupled with all of this is my strong ability to direct my own learning process, something I’ve been doing naturally for much of my life, now exercised and honed through years of online coursework. Even now, I am furthering my knowledge and understanding of digital signal processing (at least, specifically as it applies to sampled audio), something I was not able to “officially” study before.
@@ -15,11 +13,15 @@ With all of that said, we can now move on to a few specific artifacts that showc
 
 ---
 
+### Code Review
+
 First, as part of my capstone project for my degree, I present to you my code review of three artifacts I chose to enhance:
 
 <iframe src="https://drive.google.com/file/d/1Qh8Qr3i206WymGBqcJcwFGApYHn75K1a/preview" width="640" height="480"></iframe>
 
 ---
+
+### Software Engineering and Design
 
 Next, let me direct you to the first of those artifacts, a simple REST API for performing CRUD operations on a MongoDB database:
 
@@ -36,6 +38,8 @@ With the enhancements I have made, despite my lukewarm feelings about them, I ha
 While the entire enhancement process has given me more experience with all of the tools involved, and further developed my ability to analyze how understandable my code is in preparation for others to view or interact with it, a different lesson stands out to me. This particular enhancement has taught me that I still need to plan a project in far more detail before being able to accurately gauge the difficulty and effort/time requirements. I originally felt that such a simple project (essentially four core operations spread across two interacting classes) could easily be brought up to a near-professional level in about a week. While I still believe, given far more time to research each library more thoroughly, improve my Python ability, and devise more thorough tests, I could come close to attaining this ideal, I simply had unrealistic expectations given my level of knowledge and experience. Upon diving in deeper into the Python code and the libraries used, I found my understanding of them to be far less than I had first assumed; this should have been no surprise, for in any sub-area of development knowledge, what I know will likely always be outweighed by what I don’t know. I think remembering that and remaining humble and realistic in the face of it is a very important lesson – but also, with a computer science background, it is easier to know how to learn what is needed for the project at hand, and how to use relevant documentation, and how to implement new ideas and employ new technologies. In addition, given that I was one person working over a very constrained time frame, could I truly expect the polished piece of professional software that existed in my mind? Still, as mentioned above, I have managed to mold the project into a new shape, so to speak, and have added a basic framework of unit tests, and have updated the readability of everything by improving naming and writing extensive doc strings. All of this makes the project more conducive to further such enhancements, at least nudging it a bit closer to that ideal I had hoped for. 
 
 ---
+
+### Data Structures and Algorithms
 
 Next we have the second artifact, a script for pulling data from a RaspberryPi with attached GrovePi, and a hash table for storing the data for quick lookup:
 
@@ -54,6 +58,8 @@ In the end, this piece of the project taught me a lot, but in ways that initiall
 ![Performance Screenshot](https://ymerejsasnak.github.io/perfpic.png)
 
 ---
+
+### Databases
 
 To fulfill the databases category, I again went back to my [Python and MongoDB Client/Server](https://github.com/ymerejsasnak/clientserver) project. Whereas in the first category, I made a number of general improvements to the original program, this time I focused on adding another level to the software stack, allowing access to the database via HTML and asynchronous Javascript calls.
 
