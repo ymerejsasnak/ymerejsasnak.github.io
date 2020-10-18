@@ -54,8 +54,6 @@ In the end, this piece of the project taught me a lot, but in ways that initiall
 
 ---
 
-Next, let me direct you to the first of those artifacts, a simple REST API for performing CRUD operations on a MongoDB database:
-
 To fulfill the databases category, I again went back to my [Python and MongoDB Client/Server](https://github.com/ymerejsasnak/clientserver) project. Whereas in the first category, I made a number of general improvements to the original program, this time I focused on adding another level to the software stack, allowing access to the database via HTML and asynchronous Javascript calls.
 
 This item offered a lot of opportunity to explore and showcase different skills as it had many different moving parts interacting in various ways. Of course, the fact that it is centered around CRUD operations on a database makes it a perfect choice for the database category, and the enhancement provided many opportunities to reflect on various aspects of accessing databases from different layers of the software stack. I think this is best highlighted by the care and awareness that must be maintained as messages are transmitted through each layer of the stack. We have string input converted to JSON in an HTTP request, following Python method calls down to Mongo commands, before finally returning a result and propagating it up through the stack to be displayed in the message window of the form. Also, in a lot of systems, the database is essentially invisible to many average users, so this enhancement is also important in that it touches on how everything connects – from end user actions with an app or web page, down to the storage of the data itself – and addresses real-world database function.
