@@ -13,8 +13,7 @@ maybe
 
 ### Random Sampler
 
-
-<img src="https://ymerejsasnak.github.io/rsamp.png" margin="auto" height="350">
+<img src="https://ymerejsasnak.github.io/rsamp.png" height="350">
 
 [Random Sampler on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-random-sampler)
 
@@ -26,7 +25,7 @@ maybe
 
 ### CV Canvas
 
-<img src="https://ymerejsasnak.github.io/cv2.png" height="350">
+<img src="https://ymerejsasnak.github.io/cv2.png" height="400">
 
 [CV Canvas on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-cv-canvas)
 
