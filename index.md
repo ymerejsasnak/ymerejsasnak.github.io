@@ -13,25 +13,26 @@ maybe
 
 ### Random Sampler
 
-![Random Sampler](https://ymerejsasnak.github.io/rsamp.png)
+
+<img src="https://ymerejsasnak.github.io/rsamp.png" margin="auto" height="350">
 
 [Random Sampler on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-random-sampler)
 
 ### Sample Scrubber
 
-![Sample Scrubber](https://ymerejsasnak.github.io/scrubber.png)
+<img src="https://ymerejsasnak.github.io/scrubber.png" height="350">
 
 [Sample Scrubber on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-sample-scrubber)
 
 ### CV Canvas
 
-![CV Canvas](https://ymerejsasnak.github.io/cv2.png)
+<img src="https://ymerejsasnak.github.io/cv2.png" height="350">
 
 [CV Canvas on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-cv-canvas)
 
 ### Sample Swarm
 
-![Performance Screenshot](https://ymerejsasnak.github.io/swarm1.png)
+<img src="https://ymerejsasnak.github.io/swarm1.png" height="350">
 
 [not published yet](about:blank)
 
