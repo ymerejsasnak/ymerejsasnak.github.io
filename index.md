@@ -1,6 +1,61 @@
-## Welcome to my Portfolio
+# Welcome to my Portfolio
 *...a perpetual work in progress...*
 
+## Introduction (?)
+
+maybe
+
+-----
+
+## Voltage Modular Modules
+
+(general blurb?)
+
+### Random Sampler
+
+![Random Sampler](https://ymerejsasnak.github.io/rsamp.png)
+
+[Random Sampler on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-random-sampler)
+
+### Sample Scrubber
+
+![Sample Scrubber](https://ymerejsasnak.github.io/scrubber.png)
+
+[Sample Scrubber on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-sample-scrubber)
+
+### CV Canvas
+
+![CV Canvas](https://ymerejsasnak.github.io/cv2.png)
+
+[CV Canvas on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-cv-canvas)
+
+### Sample Swarm
+
+![Performance Screenshot](https://ymerejsasnak.github.io/swarm1.png)
+
+[not published yet](about:blank)
+
+-----
+
+### Selected School Projects (?)
+
+Note for portfolio:
+
+“no illusions that this is “production ready” code in any sense, but it does show that I have the skills and knowledge to meaningfully contribute to an existing codebase”
+
+demonstrated teamwork, initiative, and the ability to finish a project and get it to market
+Customer communication, ca communication etc
+50%-good solution that people actually have solves more problems and survives longer than a 99% solution that nobody has because it’s in your lab where you’re endlessly polishing the damn thin
+
+“””
+
+-----
+
+### Other Older Projects (?) 
+
+-----
+
+*### old school stuff...need to cut lots and re-edit*
 As I look back over my Bachelor of Science in Computer Science coursework, I realize I have learned a great variety of different concepts and skills. Despite this, I think the most important lessons are more general than any self-contained computer science topic as these are things I learned about myself, about my interests and goals and values. For one, through the variety of assignments and classes, I found my love of problem solving challenged and ultimately reaffirmed. Whether it be reconstructing C code from a disassembled binary, or manipulating vectors in order to build shaders for OpenGL graphics, or coding a successful merge sort, I still find that if I am presented with the logical building blocks, so to speak, I love nothing more than to find a way to fit them together to solve the problem at hand. At the same time, I’ve developed my ability to relate the piece of whatever puzzle I am currently dealing with to the bigger picture, the end goal.
 
 Beyond this I’ve also had ample opportunity to exercise my thirst for knowledge. While common wisdom often tells us to specialize, to focus on an area of expertise, I can’t help but be more of a generalist. Still, I think my inherently interdisciplinary nature has its own value, which is too often overlooked. Not just in computer science – where my interests range from artificial intelligence, to games and graphics programming, to creativity and education software, to an emerging interest in legacy systems and embedded systems, to mathematics – but I also have a long-standing and deep-seated love and respect for topics in art, history, literature, music, psychology, and so much more. Coupled with all of this is my strong ability to direct my own learning process, something I’ve been doing naturally for much of my life, now exercised and honed through years of online coursework. Even now, I am furthering my knowledge and understanding of digital signal processing (at least, specifically as it applies to sampled audio), something I was not able to “officially” study before.
