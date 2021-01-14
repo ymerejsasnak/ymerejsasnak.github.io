@@ -7,17 +7,13 @@
 
 Hello. My name is Jeremy. I tend to prefer JK.
 
-I am a father. I am a reader. I was (am?) a writer. I am a hobbyist music composer/producer. I am a thinker. I am an introvert. I am a passionate (perhaps obsessive?) problem solver and an intensely critical thinker. I love to exercise both my powers of creativity and logic.
-
-I love literature, history, anthropology, psychology, and philosophy. I love art. I love music. I love tea and weird dreams and nature walks and pizza. I love ideas. I love people. 
-
 This portfolio started life as part of the capstone class for my CS degree, but I never really felt comfortable with the end result; the writing felt fluffy and bloated (as bad college writing too often does), and I spent far more time fulfilling the specific requirements of the assignment(s) and less time presenting my self and my work in a way that I felt best. As of this writing I have no professional work experience in programming or software development, though I have had some freelancing successes over the past couple months. Instead of droning on about myself, let's get into the projects.
 
 -----
 
 ## Voltage Modular Modules
 
-The following items are components meant to be used as part of Cherry Audio's Voltage Modular Eurorack-inspired software modular synthesis system. I designed and developed each of the modules below. As of this writing, I'm approaching about 200 sales over three months, which while modest at best, I'm still happy with for such a niche product. 
+The following items are components to be used as part of Cherry Audio's Voltage Modular Eurorack-inspired software modular synthesis system. I designed and developed each of the modules below. As of this writing, I'm approaching about 200 sales over three months, which while modest at best, I'm still happy with for such a niche product. 
 
 *I have not made the code for these publicly available, though I could share it upon request.*
 
@@ -25,7 +21,9 @@ The following items are components meant to be used as part of Cherry Audio's Vo
 
 <img src="https://ymerejsasnak.github.io/rsamp.png" height="200">
 
-This was my first published module. If you're interested in what it does, feel free to follow the link below. I'd
+This was my first published module. Basically, it allows the user to load up to 8 audio samples and trigger them randomly - but there's also a lot of settings for randomly varying the sound as well.
+
+
 
 
 debugging too
