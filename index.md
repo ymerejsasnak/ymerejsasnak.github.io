@@ -17,9 +17,30 @@ The following items are components to be used as part of Cherry Audio's Voltage 
 
 *I have not made the code for these publicly available, though I could share it upon request.*
 
+
+?resume stuff to add?
+    • Demonstrated initiative and the ability to finish a project and bring it to market
+    • Applied creative and critical thinking skills to designing a unique product, 150+ sales over the first three months as evidence
+    • Employed version control (Git) to facilitate development, striving for small commits and accurate commit messages
+    • Designed and implemented sensible class structures using OOP principles, striving especially for readability and reusability (but also with eye to getting it finished rather than perfect), self-documenting code weher possible also w/ naming conventions and comments
+    • Maintained the software after launch, including new feature updates and bug fixes
+    • Devised and implemented complex algorithms, including cubic interpolation
+    • Optimized callback methods typically running 48,000 times per second
+    • Searched and studied Javadocs to learn API
+    • Self-taught basic DSP concepts as applicable to digital audio
+    • Worked with byte streams and threads
+    • debugger
+    • Wrote extensive documentation with end-user audience in mind
+    • Maintained changelogs
+    • Worked, via email, with a QA team member to resolve a confounding issue
+    • Communicated with customer via email getting details of bug and explaining fix timeline 
+    • Communicated publicly via FB and forum to field bug reports and feature requests in an audience appropriate way
+    • Wrote and published short fiction stories, self-published blog articles, further proving writing ability
+
+
 ### Random Sampler
 
-<img src="https://ymerejsasnak.github.io/rsamp.png" height="200">
+<img src="https://ymerejsasnak.github.io/rsamp.png" height="300">
 
 This was my first published module. Basically, it allows the user to load up to 8 audio samples and trigger them randomly - but there's also a lot of settings for randomly varying the sound as well.
 
@@ -44,18 +65,22 @@ bugfixes/feature requests
 
 ### Sample Scrubber
 
-<img src="https://ymerejsasnak.github.io/scrubber.png" height="200">
+<img src="https://ymerejsasnak.github.io/scrubber.png" height="300">
 
 class separation - sample vs signal
 interpolation
 (not yet implemented) research into antialiasing and oversampling
+
+reusability, etc (sampler class etc)
+
+readability (implement features after away for a while, etc)
 
 
 [Sample Scrubber on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-sample-scrubber)
 
 ### CV Canvas
 
-<img src="https://ymerejsasnak.github.io/cv2.png" height="200">
+<img src="https://ymerejsasnak.github.io/cv2.png" height="300">
 
 optimization/graphics
 
@@ -65,7 +90,7 @@ iterative development (like agile??)
 
 ### Sample Swarm
 
-<img src="https://ymerejsasnak.github.io/swarm1.png" height="200">
+<img src="https://ymerejsasnak.github.io/swarm1.png" height="300">
 
 threads
 
