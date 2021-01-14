@@ -23,11 +23,22 @@ The following items are components to be used as part of Cherry Audio's Voltage 
 
 This was my first published module. Basically, it allows the user to load up to 8 audio samples and trigger them randomly - but there's also a lot of settings for randomly varying the sound as well.
 
+settings class - 
 
+figuring out how to use outside software/files etc, how to work with given api and system but do what i want, etc
 
+built own sampler player to do what i wanted (not using prebuilt vm one)
 
-debugging too
+saving not designed with user in mind - update fiasco - communication w/ people
+bytestreams, etc
+
+version control
+
+debugging too- stepping through and watching values
 I have a great appreciation for elegant, beautifully architected code, but at the same time follow t
+
+bugfixes/feature requests
+
 
 [Random Sampler on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-random-sampler)
 
@@ -35,17 +46,28 @@ I have a great appreciation for elegant, beautifully architected code, but at th
 
 <img src="https://ymerejsasnak.github.io/scrubber.png" height="200">
 
+class separation - sample vs signal
+interpolation
+(not yet implemented) research into antialiasing and oversampling
+
+
 [Sample Scrubber on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-sample-scrubber)
 
 ### CV Canvas
 
 <img src="https://ymerejsasnak.github.io/cv2.png" height="200">
 
+optimization/graphics
+
+iterative development (like agile??)
+
 [CV Canvas on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-cv-canvas)
 
 ### Sample Swarm
 
 <img src="https://ymerejsasnak.github.io/swarm1.png" height="200">
+
+threads
 
 [not published yet](about:blank)
 
