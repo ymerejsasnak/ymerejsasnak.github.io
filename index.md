@@ -1,43 +1,75 @@
 # Welcome to my Portfolio
 *...a perpetual work in progress...*
 
-## Introduction (?)
+-----
 
-maybe
+## Introduction
+
+Hello. My name is Jeremy. I tend to prefer JK.
+
+I am a father. I am a reader. I was (am?) a writer. I am a hobbyist music composer/producer. I am a thinker. I am an introvert. I am a passionate (perhaps obsessive?) problem solver and an intensely critical thinker. I love to exercise both my powers of creativity and logic.
+
+I love literature, history, anthropology, psychology, and philosophy. I love art. I love music. I love tea and weird dreams and nature walks and pizza. I love ideas. I love people. 
+
+This portfolio started life as part of the capstone class for my CS degree, but I never really felt comfortable with the end result; the writing felt fluffy and bloated (as bad college writing too often does), and I spent far more time fulfilling the specific requirements of the assignment(s) and less time presenting my self and my work in a way that I felt best. As of this writing I have no professional work experience in programming or software development, though I have had some freelancing successes over the past couple months. Instead of droning on about myself, let's get into the projects.
 
 -----
 
 ## Voltage Modular Modules
 
-(general blurb?)
+The following items are components meant to be used as part of Cherry Audio's Voltage Modular Eurorack-inspired software modular synthesis system. I designed and developed each of the modules below. As of this writing, I'm approaching about 200 sales over three months, which while modest at best, I'm still happy with for such a niche product. 
+
+*I have not made the code for these publicly available, though I could share it upon request.*
 
 ### Random Sampler
 
-<img src="https://ymerejsasnak.github.io/rsamp.png" height="350">
+<img src="https://ymerejsasnak.github.io/rsamp.png" height="200">
+
+This was my first published module. If you're interested in what it does, feel free to follow the link below. I'd
+
+
+debugging too
+I have a great appreciation for elegant, beautifully architected code, but at the same time follow t
 
 [Random Sampler on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-random-sampler)
 
 ### Sample Scrubber
 
-<img src="https://ymerejsasnak.github.io/scrubber.png" height="350">
+<img src="https://ymerejsasnak.github.io/scrubber.png" height="200">
 
 [Sample Scrubber on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-sample-scrubber)
 
 ### CV Canvas
 
-<img src="https://ymerejsasnak.github.io/cv2.png" height="400">
+<img src="https://ymerejsasnak.github.io/cv2.png" height="200">
 
 [CV Canvas on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-cv-canvas)
 
 ### Sample Swarm
 
-<img src="https://ymerejsasnak.github.io/swarm1.png" height="350">
+<img src="https://ymerejsasnak.github.io/swarm1.png" height="200">
 
 [not published yet](about:blank)
 
 -----
 
 ### Selected School Projects (?)
+
+I'd rather get into the projects right away, but I guess for those interested, I'll give a little introduction to myself. Skipping this is fine. Anyway, I am a passionate (perhaps obsessive?) problem solver and an intensely critical thinker. I love to exercise both my powers of creativity and logical thinking - and nowhere is this better on display that in my explorations into where music and programming meet. I have an insatiable thirst for knowledge, an interest not just in computer science topics such as interests range from artificial intelligence, to games and graphics programming, to creativity and education software, to an emerging interest in legacy systems and embedded systems, to mathematics – but I also have a long-standing and deep-seated love and respect for topics in art, history, literature, music, psychology, and so much more.
+
+
+While common wisdom often tells us to specialize, to focus on an area of expertise, I can’t help but be more of a generalist. Twist my arm a bit and I'll say my focus lies in back-end Java. OK?Still, I think my inherently interdisciplinary nature has its own value, which is too often overlooked. Not just in computer science – where my  Coupled with all of this is my strong ability to direct my own learning process, something I’ve been doing naturally for much of my life, now exercised and honed through years of online coursework. Even now, I am furthering my knowledge and understanding of digital signal processing (at least, specifically as it applies to sampled audio), something I was not able to “officially” study before.
+
+
+But any intellectual challenge can be great Whether it be reconstructing C code from a disassembled binary, or manipulating vectors in order to build shaders for OpenGL graphics, or coding a successful merge sort, I still find that if I am presented with the logical building blocks, so to speak, I love nothing more than to find a way to fit them together to solve the problem at hand. At the same time, I’ve developed my ability to relate the piece of whatever puzzle I am currently dealing with to the bigger picture, the end goal.
+
+I emjoy solitary work, but I understand the value of communication and collaboration to create any significantly complex projects.
+collab. Most significant systems or components are too complex for a single person to realistically create and support alone, thus collaboration is key. The only way for people to collaborate successfully on a project is to help each other out, to properly outline requirements and carefully implement designs, to use coding best practices such as good naming conventions and formatting and commenting, to test code before submitting it for review, to graciously accept constructive criticism, to accurately log security issues, to provide audience appropriate documentation – in a single word, at every step in the process, it’s all about communication.
+
+
+With all of that said, we can now move on to a few specific artifacts that showcase some of my knowledge and abilities. I feel it’s quite difficult to illustrate the full range of my potential with a limited number of examples – take them, then, for what they are: working software artifacts that I’ve created, that show some specific problems solved using some specific techniques or tools. From these, I hope one can mentally extrapolate to the potential projects these actual projects may hint at. Less abstractly, these artifacts are also a record of much of what I mentioned above: self-directed learning, creativity and problem solving, a wide range of interests. Finally, these artifacts, all of them, are flawed. It’s important to note that I am well aware of these flaws – the areas where security is weak or features are incomplete or code is a horrid mess – and I am able to communicate this understanding to others, and I am able to, given time, address these flaws. Still, software, as a product of the human mind – a beautiful and powerful and incredibly flawed thing in itself – this is almost inevitable. As we wrestle against the intricate requirements of complex systems, nothing is ever finished, everything is a work in progress, but so is life.
+
+Finally, a quick rundown of what you'll find here, with links: the first section is Vm, then school, then other interesting(old) github things
 
 Note for portfolio:
 
