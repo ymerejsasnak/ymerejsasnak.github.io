@@ -44,11 +44,13 @@ The following items are components to be used as part of Cherry Audio's Voltage 
 
 This was my first published module. Basically, it allows the user to load up to 8 audio samples and trigger them randomly - but there's also a lot of settings for randomly varying the sound as well.
 
+I worked to maintain a separation of concerns, and thus created a class to handle individual audio samples, a class to manage the loading and playback of all loaded samples, and a class to calculate the random values to be used based on user-set parameters. I worked hard to make sure everything was well-formatted to remain readable and understandable, with clear variable/class/method names, attention to spacing, comments to indicate organization or explain less obvious pieces of code, etc. Still, it is not a polished masterpiece of development. While I have a great appreciation for elegant, beautifully architected code, I understand that the only real value that code has (aside from a learning experience) is in its life as a published product.
 settings class - 
 
-figuring out how to use outside software/files etc, how to work with given api and system but do what i want, etc
+Working up to the release of this module presented a number of hurdles to overcome, including figuring out how to work within the system and API provided while achieving my design goals. Part of the API includes prebuilt generators and effects, but instead of using the built in sample player, I found it better and more flexible to build my own for this and subsequent modules - thus making it important to make the code generic and uncoupled to thus be reusable. To save preset data, I needed to output a bytestream to the system, something I had not yet had opportunity to explore, but again I knew to turn to Java's Documentation and was able to quickly learn the basics and apply that knowledge to the task at hand.
 
-built own sampler player to do what i wanted (not using prebuilt vm one)
+There were a few hard lessons to learn along the way. The first involved how sample data was saved: I had designed the module to only retain the pathname of the file and reload it each time a preset was reloaded, based on my own preference for keeping audio on disk rather than saving it within a project. And this was my error: designing based on my own personal use case, rather than considering different options for different workflows. I've since remedied this in subsequent updates. Sadly, the first of those updates provided another debacle, otherwise known as a "learning experience" - I changed the state saving code to account for various new options, including path vs file data, while completely ignoring any checks for old versions, thus rendering those bytestreams unusable. 
+
 
 saving not designed with user in mind - update fiasco - communication w/ people
 bytestreams, etc
@@ -56,7 +58,6 @@ bytestreams, etc
 version control
 
 debugging too- stepping through and watching values
-I have a great appreciation for elegant, beautifully architected code, but at the same time follow t
 
 bugfixes/feature requests
 
