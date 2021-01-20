@@ -5,7 +5,7 @@
 
 ## Introduction
 
-Hello. My name is Jeremy. I tend to prefer JK.
+Hello. My name is Jeremy. I tend to prefer JK. [contact me](mailto:Jeremy.JK.Kansas@gmail.com)
 
 This portfolio started life as part of the capstone class for my CS degree, but I never really felt comfortable with the end result; the writing felt fluffy and bloated (as bad college writing too often does), and I spent far more time fulfilling the specific requirements of the assignment(s) and less time presenting my self and my work in a way that I felt best. As of this writing I have no professional work experience in programming or software development, though I have had some freelancing successes over the past couple months. Instead of droning on about myself, let's get into the projects.
 
@@ -15,11 +15,35 @@ This portfolio started life as part of the capstone class for my CS degree, but 
 
 The following items are components to be used as part of Cherry Audio's Voltage Modular Eurorack-inspired software modular synthesis system. I designed and developed each of the modules below. As of this writing, I'm approaching about 200 sales over about three months, which while modest at best, I'm still happy with for such a niche product, and it shows that I can complete a fully working product people are willing to buy. 
 
+In each instance, I worked to maintain a separation of concerns, using OOP principals to separate things out into sensible classes and associated methods.
+
+, and thus created a class to handle individual audio samples, a class to manage the loading and playback of all loaded samples, and a class to calculate the random values to be used based on user-set parameters. I worked hard to make sure everything was well-formatted to remain readable and understandable, with clear variable/class/method names, attention to spacing, comments to indicate organization or explain less obvious pieces of code, etc. Still, it is not a polished masterpiece of development. While I have a great appreciation for elegant, beautifully architected code, I understand that the only real value that code has (aside from a learning experience) is in its life as a published product.
+
+Working up to the release of this module presented a number of hurdles to overcome, including figuring out how to work within the system and API provided while achieving my design goals. Part of the API includes prebuilt generators and effects, but instead of using the built-in sample player, I found it better and more flexible to build my own for this and subsequent modules - thus making it important to make the code generic and uncoupled to thus be reusable. To save preset data, I needed to output a bytestream to the system, something I had not yet had opportunity to explore, but again I knew to turn to Java's documentation and was able to quickly learn the basics and apply that knowledge to the task at hand.
+
+There were a few hard lessons to learn along the way. The first involved how sample data was saved: I had designed the module to only retain the pathname of the file and reload it each time a preset was reloaded, based on my own preference for keeping audio on disk rather than saving it within a project. And this was my error: designing based on my own personal use case, rather than considering different options for different workflows. I've since remedied this in subsequent updates. Sadly, the first of those updates provided another debacle, otherwise known as a "learning experience" - I changed the state saving code to account for various new options, including path vs file data, while completely ignoring any checks for old versions, thus rendering those bytestreams unusable. 
+
+Version control (atomic commits with accurate messages)
+class structures w/ oop principles striving for readability and reusability (get finished) self-doc
+post-launch maintenance (feature reqs bugs)
+various algorithms and techniques - interpolation (linear and cubic), byte streams, threads, etc
+documentation, changelogs
+debugging
+email team, customer, forums, etc
+
+iterative development (like agile??)
+
+research into antialiasing and oversampling
+
+optimization/graphics
+
 *I have not made the code for these publicly available, though I can share it upon request.*
 
 ### Random Sampler
 
 <img src="https://ymerejsasnak.github.io/rsamp.png" height="300">
+
+
 
 [Random Sampler on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-random-sampler)
 
@@ -45,53 +69,8 @@ The following items are components to be used as part of Cherry Audio's Voltage 
 
 
 -----
-?resume stuff to add?
-    • Demonstrated initiative and the ability to finish a project and bring it to market
-    • Applied creative and critical thinking skills to designing a unique product, 150+ sales over the first three months as evidence
-    • Employed version control (Git) to facilitate development, striving for small commits and accurate commit messages
-    • Designed and implemented sensible class structures using OOP principles, striving especially for readability and reusability (but also with eye to getting it finished rather than perfect), self-documenting code weher possible also w/ naming conventions and comments
-    • Maintained the software after launch, including new feature updates and bug fixes
-    • Devised and implemented complex algorithms, including cubic interpolation
-    • Optimized callback methods typically running 48,000 times per second
-    • Searched and studied Javadocs to learn API
-    • Self-taught basic DSP concepts as applicable to digital audio
-    • Worked with byte streams and threads
-    • debugger
-    • Wrote extensive documentation with end-user audience in mind
-    • Maintained changelogs
-    • Worked, via email, with a QA team member to resolve a confounding issue
-    • Communicated with customer via email getting details of bug and explaining fix timeline 
-    • Communicated publicly via FB and forum to field bug reports and feature requests in an audience appropriate way
-    • Wrote and published short fiction stories, self-published blog articles, further proving writing ability
-This was my first published module. Basically, it allows the user to load up to 8 audio samples and trigger them randomly - but there's also a lot of settings for randomly varying the sound as well.
-
-I worked to maintain a separation of concerns, and thus created a class to handle individual audio samples, a class to manage the loading and playback of all loaded samples, and a class to calculate the random values to be used based on user-set parameters. I worked hard to make sure everything was well-formatted to remain readable and understandable, with clear variable/class/method names, attention to spacing, comments to indicate organization or explain less obvious pieces of code, etc. Still, it is not a polished masterpiece of development. While I have a great appreciation for elegant, beautifully architected code, I understand that the only real value that code has (aside from a learning experience) is in its life as a published product.
-
-Working up to the release of this module presented a number of hurdles to overcome, including figuring out how to work within the system and API provided while achieving my design goals. Part of the API includes prebuilt generators and effects, but instead of using the built-in sample player, I found it better and more flexible to build my own for this and subsequent modules - thus making it important to make the code generic and uncoupled to thus be reusable. To save preset data, I needed to output a bytestream to the system, something I had not yet had opportunity to explore, but again I knew to turn to Java's documentation and was able to quickly learn the basics and apply that knowledge to the task at hand.
-
-There were a few hard lessons to learn along the way. The first involved how sample data was saved: I had designed the module to only retain the pathname of the file and reload it each time a preset was reloaded, based on my own preference for keeping audio on disk rather than saving it within a project. And this was my error: designing based on my own personal use case, rather than considering different options for different workflows. I've since remedied this in subsequent updates. Sadly, the first of those updates provided another debacle, otherwise known as a "learning experience" - I changed the state saving code to account for various new options, including path vs file data, while completely ignoring any checks for old versions, thus rendering those bytestreams unusable. 
 
 
-saving not designed with user in mind - update fiasco - communication w/ people
-bytestreams, etc
-
-version control
-
-debugging too- stepping through and watching values
-
-bugfixes/feature requests
-
-iterative development (like agile??)
-
-threads
-class separation - sample vs signal
-interpolation
-(not yet implemented) research into antialiasing and oversampling
-
-reusability, etc (sampler class etc)
-
-readability (implement features after away for a while, etc)
-optimization/graphics
 
 
 
@@ -130,26 +109,6 @@ Customer communication, ca communication etc
 
 -----
 
-*### old school stuff...need to cut lots and re-edit*
-As I look back over my Bachelor of Science in Computer Science coursework, I realize I have learned a great variety of different concepts and skills. Despite this, I think the most important lessons are more general than any self-contained computer science topic as these are things I learned about myself, about my interests and goals and values. For one, through the variety of assignments and classes, I found my love of problem solving challenged and ultimately reaffirmed. Whether it be reconstructing C code from a disassembled binary, or manipulating vectors in order to build shaders for OpenGL graphics, or coding a successful merge sort, I still find that if I am presented with the logical building blocks, so to speak, I love nothing more than to find a way to fit them together to solve the problem at hand. At the same time, I’ve developed my ability to relate the piece of whatever puzzle I am currently dealing with to the bigger picture, the end goal.
-
-Beyond this I’ve also had ample opportunity to exercise my thirst for knowledge. While common wisdom often tells us to specialize, to focus on an area of expertise, I can’t help but be more of a generalist. Still, I think my inherently interdisciplinary nature has its own value, which is too often overlooked. Not just in computer science – where my interests range from artificial intelligence, to games and graphics programming, to creativity and education software, to an emerging interest in legacy systems and embedded systems, to mathematics – but I also have a long-standing and deep-seated love and respect for topics in art, history, literature, music, psychology, and so much more. Coupled with all of this is my strong ability to direct my own learning process, something I’ve been doing naturally for much of my life, now exercised and honed through years of online coursework. Even now, I am furthering my knowledge and understanding of digital signal processing (at least, specifically as it applies to sampled audio), something I was not able to “officially” study before.
-
-My values have evolved somewhat over the past few years, thanks in part to some of my coursework. If we tighten the focus for a moment onto software development (which, though not officially for technical reasons, could be said to be my concentration), rather than computer science as a whole, the value that looms largest in my mind is collaboration. It’s important to remember that software is made for people (businesses, consumers, industries, etc.) and it’s made by people. Most significant systems or components are too complex for a single person to realistically create and support alone, thus collaboration is key. The only way for people to collaborate successfully on a project is to help each other out, to properly outline requirements and carefully implement designs, to use coding best practices such as good naming conventions and formatting and commenting, to test code before submitting it for review, to graciously accept constructive criticism, to accurately log security issues, to provide audience appropriate documentation – in a single word, at every step in the process, it’s all about communication.
-
-As my education progressed, my goals remained consistent, with only slight adjustments to my outlook. My biggest aspiration, and something I’ve already begun work on, is to work for myself or as part of a small company, creating high quality and unique audio software for musicians, producers, and sound designers. Knowing that this is a narrow niche, and a hefty portion of luck would be involved in finding success there, I typically widen my “ideal job” to include anything related to creative or educational software. In many of my past personal artifacts, which will soon enough be featured in this portfolio as well, I worked to come up with novel ways for a user to interact with sound and graphics, both on desktops and touch screens, and these are experiences that could inform future work at building such creative or educational software. Realistically, I expect to be far more flexible at first as I am new to the field as a whole, but having a potential endpoint in mind and working at my various side-projects will help focus my endless education and drive my efforts at growth.
-
-With all of that said, we can now move on to a few specific artifacts that showcase some of my knowledge and abilities. I feel it’s quite difficult to illustrate the full range of my potential with a limited number of examples – take them, then, for what they are: working software artifacts that I’ve created, that show some specific problems solved using some specific techniques or tools. From these, I hope one can mentally extrapolate to the potential projects these actual projects may hint at. Less abstractly, these artifacts are also a record of much of what I mentioned above: self-directed learning, creativity and problem solving, a wide range of interests. Finally, these artifacts, all of them, are flawed. It’s important to note that I am well aware of these flaws – the areas where security is weak or features are incomplete or code is a horrid mess – and I am able to communicate this understanding to others, and I am able to, given time, address these flaws. Still, software, as a product of the human mind – a beautiful and powerful and incredibly flawed thing in itself – this is almost inevitable. As we wrestle against the intricate requirements of complex systems, nothing is ever finished, everything is a work in progress, but so is life.
-
----
-
-### Code Review
-
-First, as part of my capstone project for my degree, I present to you my code review of three artifacts I chose to enhance:
-
-<iframe src="https://drive.google.com/file/d/1Qh8Qr3i206WymGBqcJcwFGApYHn75K1a/preview" width="640" height="480"></iframe>
-
----
 
 ### Software Engineering and Design
 
@@ -203,10 +162,4 @@ Not all went smoothly, however. I had many issues initially with trying to get t
 
 This enhancement also really drove home the value of collaboration and separation of duties. As usual, while first setting out to perform this enhancement, I had a smoothly-functioning, nice-looking, error-free web page in mind – and I could get there, given much more time. But for such a software stack to be fully functional, user friendly, and perhaps most of all secure, a team would be better able to achieve this as each could focus on different aspects: back end, front end, UI/UX, visual design, testing, security, etc. As a solo developer within very limited time constraints, I could really only hope to lay the groundwork for the ideal concept I had, enacting core functionality – but through well-formatted and commented code, as well as helpful git commit messages with small and frequent commits, I would hope to pave the way for others to more easily find their way when contributing to my base code.
 
----
 
-*(there are many more projects on my github that I would like to highlight in the future...)*
-
-*(these include my experiemental music instruments made in Processing, my work from my reverse engineering class, my initial forays into VMs and emulation with the LC-3, and a lot more stuff, feel free to browse my github until I get links officially added here...)*
-
-*(also I will post links to my published Voltage Modular modules once I they are approved, but I will likely not be sharing the code for these...)*
