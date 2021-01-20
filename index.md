@@ -13,11 +13,38 @@ This portfolio started life as part of the capstone class for my CS degree, but 
 
 ## Voltage Modular Modules
 
-The following items are components to be used as part of Cherry Audio's Voltage Modular Eurorack-inspired software modular synthesis system. I designed and developed each of the modules below. As of this writing, I'm approaching about 200 sales over three months, which while modest at best, I'm still happy with for such a niche product. 
+The following items are components to be used as part of Cherry Audio's Voltage Modular Eurorack-inspired software modular synthesis system. I designed and developed each of the modules below. As of this writing, I'm approaching about 200 sales over about three months, which while modest at best, I'm still happy with for such a niche product, and it shows that I can complete a fully working product people are willing to buy. 
 
-*I have not made the code for these publicly available, though I could share it upon request.*
+*I have not made the code for these publicly available, though I can share it upon request.*
+
+### Random Sampler
+
+<img src="https://ymerejsasnak.github.io/rsamp.png" height="300">
+
+[Random Sampler on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-random-sampler)
+
+### Sample Scrubber
+
+<img src="https://ymerejsasnak.github.io/scrubber.png" height="300">
+
+[Sample Scrubber on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-sample-scrubber)
+
+### CV Canvas
+
+<img src="https://ymerejsasnak.github.io/cv2.png" height="300">
+
+[CV Canvas on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-cv-canvas)
+
+### Sample Swarm
+
+<img src="https://ymerejsasnak.github.io/swarm1.png" height="300">
+
+[Sample Swarm on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-sample-swarm)
 
 
+
+
+-----
 ?resume stuff to add?
     • Demonstrated initiative and the ability to finish a project and bring it to market
     • Applied creative and critical thinking skills to designing a unique product, 150+ sales over the first three months as evidence
@@ -36,18 +63,11 @@ The following items are components to be used as part of Cherry Audio's Voltage 
     • Communicated with customer via email getting details of bug and explaining fix timeline 
     • Communicated publicly via FB and forum to field bug reports and feature requests in an audience appropriate way
     • Wrote and published short fiction stories, self-published blog articles, further proving writing ability
-
-
-### Random Sampler
-
-<img src="https://ymerejsasnak.github.io/rsamp.png" height="300">
-
 This was my first published module. Basically, it allows the user to load up to 8 audio samples and trigger them randomly - but there's also a lot of settings for randomly varying the sound as well.
 
 I worked to maintain a separation of concerns, and thus created a class to handle individual audio samples, a class to manage the loading and playback of all loaded samples, and a class to calculate the random values to be used based on user-set parameters. I worked hard to make sure everything was well-formatted to remain readable and understandable, with clear variable/class/method names, attention to spacing, comments to indicate organization or explain less obvious pieces of code, etc. Still, it is not a polished masterpiece of development. While I have a great appreciation for elegant, beautifully architected code, I understand that the only real value that code has (aside from a learning experience) is in its life as a published product.
-settings class - 
 
-Working up to the release of this module presented a number of hurdles to overcome, including figuring out how to work within the system and API provided while achieving my design goals. Part of the API includes prebuilt generators and effects, but instead of using the built in sample player, I found it better and more flexible to build my own for this and subsequent modules - thus making it important to make the code generic and uncoupled to thus be reusable. To save preset data, I needed to output a bytestream to the system, something I had not yet had opportunity to explore, but again I knew to turn to Java's Documentation and was able to quickly learn the basics and apply that knowledge to the task at hand.
+Working up to the release of this module presented a number of hurdles to overcome, including figuring out how to work within the system and API provided while achieving my design goals. Part of the API includes prebuilt generators and effects, but instead of using the built-in sample player, I found it better and more flexible to build my own for this and subsequent modules - thus making it important to make the code generic and uncoupled to thus be reusable. To save preset data, I needed to output a bytestream to the system, something I had not yet had opportunity to explore, but again I knew to turn to Java's documentation and was able to quickly learn the basics and apply that knowledge to the task at hand.
 
 There were a few hard lessons to learn along the way. The first involved how sample data was saved: I had designed the module to only retain the pathname of the file and reload it each time a preset was reloaded, based on my own preference for keeping audio on disk rather than saving it within a project. And this was my error: designing based on my own personal use case, rather than considering different options for different workflows. I've since remedied this in subsequent updates. Sadly, the first of those updates provided another debacle, otherwise known as a "learning experience" - I changed the state saving code to account for various new options, including path vs file data, while completely ignoring any checks for old versions, thus rendering those bytestreams unusable. 
 
@@ -61,13 +81,9 @@ debugging too- stepping through and watching values
 
 bugfixes/feature requests
 
+iterative development (like agile??)
 
-[Random Sampler on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-random-sampler)
-
-### Sample Scrubber
-
-<img src="https://ymerejsasnak.github.io/scrubber.png" height="300">
-
+threads
 class separation - sample vs signal
 interpolation
 (not yet implemented) research into antialiasing and oversampling
@@ -75,29 +91,10 @@ interpolation
 reusability, etc (sampler class etc)
 
 readability (implement features after away for a while, etc)
-
-
-[Sample Scrubber on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-sample-scrubber)
-
-### CV Canvas
-
-<img src="https://ymerejsasnak.github.io/cv2.png" height="300">
-
 optimization/graphics
 
-iterative development (like agile??)
 
-[CV Canvas on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-cv-canvas)
 
-### Sample Swarm
-
-<img src="https://ymerejsasnak.github.io/swarm1.png" height="300">
-
-threads
-
-[not published yet](about:blank)
-
------
 
 ### Selected School Projects (?)
 
