@@ -7,43 +7,25 @@
 
 Hello. My name is Jeremy. I tend to prefer JK. [contact me](mailto:Jeremy.JK.Kansas@gmail.com)
 
-This portfolio started life as part of the capstone class for my CS degree, but I never really felt comfortable with the end result; the writing felt fluffy and bloated (as bad college writing too often does), and I spent far more time fulfilling the specific requirements of the assignment(s) and less time presenting my self and my work in a way that I felt best. As of this writing I have no professional work experience in programming or software development, though I have had some freelancing successes over the past couple months. Instead of droning on about myself, let's get into the projects.
+This portfolio started life as part of the capstone class for my CS degree, but I never really felt comfortable with the end result; the writing felt fluffy and bloated (as bad college writing too often does), and I spent more time fulfilling the specific requirements of the assignment(s) and less time presenting my self and my work in a way that I felt best. As of this writing I have no professional work experience in programming or software development, though I have had some freelancing successes over the past couple months. Instead of droning on about myself, let's get into the projects.
 
 -----
 
 ## Voltage Modular Modules
 
-The following items are components to be used as part of Cherry Audio's Voltage Modular Eurorack-inspired software modular synthesis system. I designed and developed each of the modules below. As of this writing, I'm approaching about 200 sales over about three months, which while modest at best, I'm still happy with for such a niche product, and it shows that I can complete a fully working product people are willing to buy. 
+The following items are components to be used as part of Cherry Audio's Voltage Modular Eurorack-inspired software modular synthesis system. I designed and developed each of the modules below. As of this writing, I have gotten 200+ sales over a time period of about three months (and probably at least as many of the one module I've offered for free). While these numbers are modest at best, I still count it as a success given its status as a niche product. Most importantly, however, it shows that I can design, implement, and release a fully working product people are willing to buy. 
 
-In each instance, I worked to maintain a separation of concerns, using OOP principals to separate things out into sensible classes and associated methods.
+In each instance, I did my best to follow best practices, including keeping code readable and reusable. Still, none of these are polished masterpieces of development, nor should they be. While I have a great appreciation for elegant, clear, beautifully architected code, I understand that the only real value that code such as this has (aside from a learning experience) is in its life as a published product.
 
-, and thus created a class to handle individual audio samples, a class to manage the loading and playback of all loaded samples, and a class to calculate the random values to be used based on user-set parameters. I worked hard to make sure everything was well-formatted to remain readable and understandable, with clear variable/class/method names, attention to spacing, comments to indicate organization or explain less obvious pieces of code, etc. Still, it is not a polished masterpiece of development. While I have a great appreciation for elegant, beautifully architected code, I understand that the only real value that code has (aside from a learning experience) is in its life as a published product.
+Beyond that, the experience with these modules has given me further practice. I employed Git for version control, striving to keep my commits atomic with clear/accurate messages. I also have since been involved with post-launch maintenance and updates, including implementing bug fixes and feature requests. The various modules gave me an opportunity to work with a number of concepts and techniques, including concurrency, byte streams, interpolation, aliasing, optimization, and even UI considerations (not something I'd ever consider a strong suit).
 
-Working up to the release of this module presented a number of hurdles to overcome, including figuring out how to work within the system and API provided while achieving my design goals. Part of the API includes prebuilt generators and effects, but instead of using the built-in sample player, I found it better and more flexible to build my own for this and subsequent modules - thus making it important to make the code generic and uncoupled to thus be reusable. To save preset data, I needed to output a bytestream to the system, something I had not yet had opportunity to explore, but again I knew to turn to Java's documentation and was able to quickly learn the basics and apply that knowledge to the task at hand.
-
-There were a few hard lessons to learn along the way. The first involved how sample data was saved: I had designed the module to only retain the pathname of the file and reload it each time a preset was reloaded, based on my own preference for keeping audio on disk rather than saving it within a project. And this was my error: designing based on my own personal use case, rather than considering different options for different workflows. I've since remedied this in subsequent updates. Sadly, the first of those updates provided another debacle, otherwise known as a "learning experience" - I changed the state saving code to account for various new options, including path vs file data, while completely ignoring any checks for old versions, thus rendering those bytestreams unusable. 
-
-Version control (atomic commits with accurate messages)
-class structures w/ oop principles striving for readability and reusability (get finished) self-doc
-post-launch maintenance (feature reqs bugs)
-various algorithms and techniques - interpolation (linear and cubic), byte streams, threads, etc
-documentation, changelogs
-debugging
-email team, customer, forums, etc
-
-iterative development (like agile??)
-
-research into antialiasing and oversampling
-
-optimization/graphics
-
-*I have not made the code for these publicly available, though I can share it upon request.*
+*I have not currently made the code for these publicly available, but I can share it upon request.*
 
 ### Random Sampler
 
 <img src="https://ymerejsasnak.github.io/rsamp.png" height="300">
 
-
+This module allows the user to load up to 8 audio samples and then randomly trigger them, while also adding randomized variation to a number of parameters including volume, pitch, and start offset. More development details [here](about:blank).
 
 [Random Sampler on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-random-sampler)
 
@@ -51,11 +33,15 @@ optimization/graphics
 
 <img src="https://ymerejsasnak.github.io/scrubber.png" height="300">
 
+This module allows the user to load up an audio sample and control playback position with a control voltage. More development details [here](about:blank).
+
 [Sample Scrubber on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-sample-scrubber)
 
 ### CV Canvas
 
 <img src="https://ymerejsasnak.github.io/cv2.png" height="300">
+
+This module allows the user to draw four different custom curves and read/output them in various ways to control any other parameters of other modules. A lot of options and random generation functions are included as well. More development details [here](about:blank).
 
 [CV Canvas on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-cv-canvas)
 
@@ -63,10 +49,9 @@ optimization/graphics
 
 <img src="https://ymerejsasnak.github.io/swarm1.png" height="300">
 
+This module allows the user to load a sample and, based on a few settings, it overlays the sample on the output buffer the chosen number of times. I chose initially to offer this as a free module and plan to make the code for this public soon. More development details [here](about:blank).
+
 [Sample Swarm on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-sample-swarm)
-
-
-
 
 -----
 
