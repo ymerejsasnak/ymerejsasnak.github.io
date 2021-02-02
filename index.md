@@ -25,7 +25,7 @@ Beyond that, the experience with these modules has given me further practice. I 
 
 <img src="https://ymerejsasnak.github.io/rsamp.png" height="300">
 
-This module allows the user to load up to 8 audio samples and then randomly trigger them, while also adding randomized variation to a number of parameters including volume, pitch, and start offset. More development details [here](about:blank).
+This module allows the user to load up to 8 audio samples and then randomly trigger them, while also adding randomized variation to a number of parameters including volume, pitch, and start offset. More development details [here](https://github.com/ymerejsasnak/ymerejsasnak.github.io/blob/master/sampler.md).
 
 [Random Sampler on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-random-sampler)
 
