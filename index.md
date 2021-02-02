@@ -17,7 +17,7 @@ The following items are components to be used as part of Cherry Audio's Voltage 
 
 In each instance, I did my best to follow best practices, including keeping code readable and reusable. Still, none of these are polished masterpieces of development, nor should they be. While I have a great appreciation for elegant, clear, beautifully architected code, I understand that the only real value that code such as this has (aside from a learning experience) is in its life as a published product.
 
-Beyond that, the experience with these modules has given me further practice. I employed Git for version control, striving to keep my commits atomic with clear/accurate messages. I also have since been involved with post-launch maintenance and updates, including implementing bug fixes and feature requests. The various modules gave me an opportunity to work with a number of concepts and techniques, including concurrency, byte streams, interpolation, aliasing, optimization, and even UI considerations (not something I'd ever consider a strong suit).
+Beyond that, the experience with these modules has given me further practice. I employed Git for version control, striving to keep my commits atomic with clear/accurate messages. I also have since been involved with post-launch maintenance and updates, including communication with customers and Cherry Audio employees and implementing bug fixes and feature requests. The various modules gave me an opportunity to work with a number of concepts and techniques, including concurrency, byte streams, interpolation, aliasing, optimization, and even UI considerations (not something I'd ever consider a strong suit).
 
 *I have not currently made the code for these publicly available, but I can share it upon request.*
 
@@ -60,7 +60,39 @@ This module allows the user to load a sample and, based on a few settings, it ov
 
 
 
-### Selected School Projects (?)
+
+
+
+## Other Projects
+
+### capstone projects?
+
+### android eportfolio?
+
+### rev engineering (maybe with lc3 too?)
+
+(that's probably enough)
+
+
+
+## overview of rest of github
+
+(quick rundown of other interesting projects - even if unfinished)
+
+spoon.cpp?
+processing audio things
+gen algorithms
+ga-py?
+pyatzee
+pythonga
+ruby - cliserverbrowser
+ruby - mergesort
+js- lightsout snake memory terrarium
+
+
+
+
+
 
 I'd rather get into the projects right away, but I guess for those interested, I'll give a little introduction to myself. Skipping this is fine. Anyway, I am a passionate (perhaps obsessive?) problem solver and an intensely critical thinker. I love to exercise both my powers of creativity and logical thinking - and nowhere is this better on display that in my explorations into where music and programming meet. I have an insatiable thirst for knowledge, an interest not just in computer science topics such as interests range from artificial intelligence, to games and graphics programming, to creativity and education software, to an emerging interest in legacy systems and embedded systems, to mathematics – but I also have a long-standing and deep-seated love and respect for topics in art, history, literature, music, psychology, and so much more.
 
@@ -76,26 +108,11 @@ collab. Most significant systems or components are too complex for a single pers
 
 With all of that said, we can now move on to a few specific artifacts that showcase some of my knowledge and abilities. I feel it’s quite difficult to illustrate the full range of my potential with a limited number of examples – take them, then, for what they are: working software artifacts that I’ve created, that show some specific problems solved using some specific techniques or tools. From these, I hope one can mentally extrapolate to the potential projects these actual projects may hint at. Less abstractly, these artifacts are also a record of much of what I mentioned above: self-directed learning, creativity and problem solving, a wide range of interests. Finally, these artifacts, all of them, are flawed. It’s important to note that I am well aware of these flaws – the areas where security is weak or features are incomplete or code is a horrid mess – and I am able to communicate this understanding to others, and I am able to, given time, address these flaws. Still, software, as a product of the human mind – a beautiful and powerful and incredibly flawed thing in itself – this is almost inevitable. As we wrestle against the intricate requirements of complex systems, nothing is ever finished, everything is a work in progress, but so is life.
 
-Finally, a quick rundown of what you'll find here, with links: the first section is Vm, then school, then other interesting(old) github things
 
-Note for portfolio:
 
-“no illusions that this is “production ready” code in any sense, but it does show that I have the skills and knowledge to meaningfully contribute to an existing codebase”
-
-demonstrated teamwork, initiative, and the ability to finish a project and get it to market
-Customer communication, ca communication etc
-50%-good solution that people actually have solves more problems and survives longer than a 99% solution that nobody has because it’s in your lab where you’re endlessly polishing the damn thin
-
-“””
 
 -----
-
-### Other Older Projects (?) 
-
------
-
-
-### Software Engineering and Design
+### client server thing
 
 Next, let me direct you to the first of those artifacts, a simple REST API for performing CRUD operations on a MongoDB database:
 
@@ -111,9 +128,23 @@ With the enhancements I have made, despite my lukewarm feelings about them, I ha
 
 While the entire enhancement process has given me more experience with all of the tools involved, and further developed my ability to analyze how understandable my code is in preparation for others to view or interact with it, a different lesson stands out to me. This particular enhancement has taught me that I still need to plan a project in far more detail before being able to accurately gauge the difficulty and effort/time requirements. I originally felt that such a simple project (essentially four core operations spread across two interacting classes) could easily be brought up to a near-professional level in about a week. While I still believe, given far more time to research each library more thoroughly, improve my Python ability, and devise more thorough tests, I could come close to attaining this ideal, I simply had unrealistic expectations given my level of knowledge and experience. Upon diving in deeper into the Python code and the libraries used, I found my understanding of them to be far less than I had first assumed; this should have been no surprise, for in any sub-area of development knowledge, what I know will likely always be outweighed by what I don’t know. I think remembering that and remaining humble and realistic in the face of it is a very important lesson – but also, with a computer science background, it is easier to know how to learn what is needed for the project at hand, and how to use relevant documentation, and how to implement new ideas and employ new technologies. In addition, given that I was one person working over a very constrained time frame, could I truly expect the polished piece of professional software that existed in my mind? Still, as mentioned above, I have managed to mold the project into a new shape, so to speak, and have added a basic framework of unit tests, and have updated the readability of everything by improving naming and writing extensive doc strings. All of this makes the project more conducive to further such enhancements, at least nudging it a bit closer to that ideal I had hoped for. 
 
+
+
+To fulfill the databases category, I again went back to my [Python and MongoDB Client/Server](https://github.com/ymerejsasnak/clientserver) project. Whereas in the first category, I made a number of general improvements to the original program, this time I focused on adding another level to the software stack, allowing access to the database via HTML and asynchronous Javascript calls.
+
+This item offered a lot of opportunity to explore and showcase different skills as it had many different moving parts interacting in various ways. Of course, the fact that it is centered around CRUD operations on a database makes it a perfect choice for the database category, and the enhancement provided many opportunities to reflect on various aspects of accessing databases from different layers of the software stack. I think this is best highlighted by the care and awareness that must be maintained as messages are transmitted through each layer of the stack. We have string input converted to JSON in an HTTP request, following Python method calls down to Mongo commands, before finally returning a result and propagating it up through the stack to be displayed in the message window of the form. Also, in a lot of systems, the database is essentially invisible to many average users, so this enhancement is also important in that it touches on how everything connects – from end user actions with an app or web page, down to the storage of the data itself – and addresses real-world database function.
+
+This artifact and the implemented enhancements further support course outcomes. Awareness of collaboration and a team environment means I always strive to keep code readable and free of other issues so that others may view it or work with it without confusion. Again, as with the other two enhancements, this one provided an opportunity to exercise code review skills and verbal communication skills during the planning stages, then to exercise written communication skills and analytical skills during the composition of the narrative. As I’ve already written, and will elaborate on further below, this enhancement shows a variety of skills and tools. I was unable to directly address security in my enhancement, due to some challenges and time constraints outlined below, but this artifact does present a great opportunity to at least be aware of necessary further enhancements to address security issues.
+
+This enhancement came with many different challenges, some expected and some not. For one, I knew when initially choosing this enhancement that I might be taking on a bit of risk in that I hadn’t actually written any HTML or Javascript in five or more years. There were, in fact, some moments early on where I wasn’t sure how to proceed. However, as in earlier enhancements, I found that my education and previous experience allowed me to find resources and apply new syntax and commands on top of already familiar concepts of software construction and algorithmic thinking, making it fairly easy to adapt to these unfamiliar languages and paradigms. I was able to progress, in a matter of days, from not even remembering how to structure an HTML document to having a functioning (if minimal and maybe a bit ugly) web interface for a database. As I’ve written elsewhere, this ability to quickly learn and adapt to different technologies, libraries, tools, etc. should be invaluable in a field often driven by innovation.
+
+Not all went smoothly, however. I had many issues initially with trying to get the index.html page to actually communicate with the Bottle.py server I had running locally. I was getting error messages related to Cross Origin Resource Sharing, which I was vaguely familiar with from prior web experience, but I didn’t understand how it applied to my situation. Then I realized, on my machine, I was running the server on “localhost” but loading the HTML file directly from my C drive, which the browser interpreted as different origins. From here, I just had to figure out how to statically serve files directly from Bottle, so that the index.html would also come from the same host, and this issue would be resolved. Through this, I was able to exercise problem solving and research skills to resolve my issue, and get a deeper understanding of web programming in the process.
+
+This enhancement also really drove home the value of collaboration and separation of duties. As usual, while first setting out to perform this enhancement, I had a smoothly-functioning, nice-looking, error-free web page in mind – and I could get there, given much more time. But for such a software stack to be fully functional, user friendly, and perhaps most of all secure, a team would be better able to achieve this as each could focus on different aspects: back end, front end, UI/UX, visual design, testing, security, etc. As a solo developer within very limited time constraints, I could really only hope to lay the groundwork for the ideal concept I had, enacting core functionality – but through well-formatted and commented code, as well as helpful git commit messages with small and frequent commits, I would hope to pave the way for others to more easily find their way when contributing to my base code.
+
 ---
 
-### Data Structures and Algorithms
+### wetspec/hash table
 
 Next we have the second artifact, a script for pulling data from a RaspberryPi with attached GrovePi, and a hash table for storing the data for quick lookup:
 
@@ -130,21 +161,5 @@ This enhancement met the course objectives I expected it to. Its primary purpose
 In the end, this piece of the project taught me a lot, but in ways that initially surprised me. The actual implementation of the core structure of the hash table class and its methods was much easier than I had anticipated, but fine-tuning its operation proved to be very challenging. The date/times used as keys were difficult to hash effectively because they were generally regularly spaced values (each was ‘rounded,’ so to speak, to the nearest half hour mark). I tried various tricks to make the values hash more randomly, but nothing worked to my liking, so I returned to my original plan, which was just performing a modulus operation of a numerical representation of the key by the size of the table. Because of this simplicity of the hash function, the table size became more important and really needed to be a prime-valued size to help spread out the entries. I toyed with non-prime tables since they would be easier to resize, but ultimately found them to have far too many collisions. Next, my initial plan had been to resize the table when it reached about 75% capacity, but this proved to be too high given that my collision resolution strategy was straightforward linear probing (inserting the data into the first non-colliding index) so I settled for about 50% capacity. From this we come to the most glaring example of a difficult trade-off: I can perform over 10,000 random look-ups on my hash table in a fraction of a second (based on my simple performance tests) but at the cost of memory – at any time there are empty spaces equaling anywhere from about 1 to 3 times the number of actual data points.
 
 ![Performance Screenshot](https://ymerejsasnak.github.io/perfpic.png)
-
----
-
-### Databases
-
-To fulfill the databases category, I again went back to my [Python and MongoDB Client/Server](https://github.com/ymerejsasnak/clientserver) project. Whereas in the first category, I made a number of general improvements to the original program, this time I focused on adding another level to the software stack, allowing access to the database via HTML and asynchronous Javascript calls.
-
-This item offered a lot of opportunity to explore and showcase different skills as it had many different moving parts interacting in various ways. Of course, the fact that it is centered around CRUD operations on a database makes it a perfect choice for the database category, and the enhancement provided many opportunities to reflect on various aspects of accessing databases from different layers of the software stack. I think this is best highlighted by the care and awareness that must be maintained as messages are transmitted through each layer of the stack. We have string input converted to JSON in an HTTP request, following Python method calls down to Mongo commands, before finally returning a result and propagating it up through the stack to be displayed in the message window of the form. Also, in a lot of systems, the database is essentially invisible to many average users, so this enhancement is also important in that it touches on how everything connects – from end user actions with an app or web page, down to the storage of the data itself – and addresses real-world database function.
-
-This artifact and the implemented enhancements further support course outcomes. Awareness of collaboration and a team environment means I always strive to keep code readable and free of other issues so that others may view it or work with it without confusion. Again, as with the other two enhancements, this one provided an opportunity to exercise code review skills and verbal communication skills during the planning stages, then to exercise written communication skills and analytical skills during the composition of the narrative. As I’ve already written, and will elaborate on further below, this enhancement shows a variety of skills and tools. I was unable to directly address security in my enhancement, due to some challenges and time constraints outlined below, but this artifact does present a great opportunity to at least be aware of necessary further enhancements to address security issues.
-
-This enhancement came with many different challenges, some expected and some not. For one, I knew when initially choosing this enhancement that I might be taking on a bit of risk in that I hadn’t actually written any HTML or Javascript in five or more years. There were, in fact, some moments early on where I wasn’t sure how to proceed. However, as in earlier enhancements, I found that my education and previous experience allowed me to find resources and apply new syntax and commands on top of already familiar concepts of software construction and algorithmic thinking, making it fairly easy to adapt to these unfamiliar languages and paradigms. I was able to progress, in a matter of days, from not even remembering how to structure an HTML document to having a functioning (if minimal and maybe a bit ugly) web interface for a database. As I’ve written elsewhere, this ability to quickly learn and adapt to different technologies, libraries, tools, etc. should be invaluable in a field often driven by innovation.
-
-Not all went smoothly, however. I had many issues initially with trying to get the index.html page to actually communicate with the Bottle.py server I had running locally. I was getting error messages related to Cross Origin Resource Sharing, which I was vaguely familiar with from prior web experience, but I didn’t understand how it applied to my situation. Then I realized, on my machine, I was running the server on “localhost” but loading the HTML file directly from my C drive, which the browser interpreted as different origins. From here, I just had to figure out how to statically serve files directly from Bottle, so that the index.html would also come from the same host, and this issue would be resolved. Through this, I was able to exercise problem solving and research skills to resolve my issue, and get a deeper understanding of web programming in the process.
-
-This enhancement also really drove home the value of collaboration and separation of duties. As usual, while first setting out to perform this enhancement, I had a smoothly-functioning, nice-looking, error-free web page in mind – and I could get there, given much more time. But for such a software stack to be fully functional, user friendly, and perhaps most of all secure, a team would be better able to achieve this as each could focus on different aspects: back end, front end, UI/UX, visual design, testing, security, etc. As a solo developer within very limited time constraints, I could really only hope to lay the groundwork for the ideal concept I had, enacting core functionality – but through well-formatted and commented code, as well as helpful git commit messages with small and frequent commits, I would hope to pave the way for others to more easily find their way when contributing to my base code.
 
 
