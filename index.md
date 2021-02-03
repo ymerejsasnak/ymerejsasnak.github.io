@@ -5,7 +5,7 @@
 
 ## Introduction
 
-Hello. My name is Jeremy. I tend to prefer JK. [contact me](mailto:Jeremy.JK.Kansas@gmail.com)
+Hello. My name is Jeremy. These days I tend to prefer JK, but it doesn't really matter. You can get in touch with me by email [here](mailto:Jeremy.JK.Kansas@gmail.com).
 
 This portfolio started life as part of the capstone class for my CS degree, but I never really felt comfortable with the end result; the writing felt fluffy and bloated (as bad college writing too often does), and I spent more time fulfilling the specific requirements of the assignment(s) and less time presenting my self and my work in a way that I felt best. As of this writing I have no professional work experience in programming or software development, though I have had some freelancing successes over the past couple months. Instead of droning on about myself, let's get into the projects.
 
@@ -13,11 +13,11 @@ This portfolio started life as part of the capstone class for my CS degree, but 
 
 ## Voltage Modular Modules
 
-The following items are components to be used as part of Cherry Audio's Voltage Modular Eurorack-inspired software modular synthesis system. I designed and developed each of the modules below. As of this writing, I have gotten 200+ sales over a time period of about three months (and probably at least as many of the one module I've offered for free). While these numbers are modest at best, I still count it as a success given its status as a niche product. Most importantly, however, it shows that I can design, implement, and release a fully working product people are willing to buy. 
+The following items are components to be used as part of Cherry Audio's Voltage Modular Eurorack-inspired software modular synthesis system. I designed and developed each of the modules below. As of this writing, I have gotten 200+ sales over a time period of about three months. While these numbers are modest at best, I still count it as a success given its status as a niche product. More importantly, these modules show that I can design, implement, and release a fully working product people are willing to buy. 
 
 In each instance, I did my best to follow best practices, including keeping code readable and reusable. Still, none of these are polished masterpieces of development, nor should they be. While I have a great appreciation for elegant, clear, beautifully architected code, I understand that the only real value that code such as this has (aside from a learning experience) is in its life as a published product.
 
-Beyond that, the experience with these modules has given me further practice. I employed Git for version control, striving to keep my commits atomic with clear/accurate messages. I also have since been involved with post-launch maintenance and updates, including communication with customers and Cherry Audio employees and implementing bug fixes and feature requests. The various modules gave me an opportunity to work with a number of concepts and techniques, including concurrency, byte streams, interpolation, aliasing, optimization, and even UI considerations (not something I'd ever consider a strong suit).
+Beyond that, the experience with these modules has given me further practice. I employed Git for version control, striving to keep my commits atomic with clear/accurate messages. I also have since been involved with post-launch maintenance and updates, including communication with customers and Cherry Audio employees and implementing bug fixes and feature requests. The various modules gave me an opportunity to work with a number of concepts and techniques, including concurrency, byte streams, digital signal processing (filtering, aliasing, interpolation, etc.), optimization, and even UI/UX considerations.
 
 *I have not currently made the code for these publicly available, but I can share it upon request.*
 
@@ -49,45 +49,33 @@ This module allows the user to draw four different custom curves and read/output
 
 <img src="https://ymerejsasnak.github.io/swarm1.png" height="300">
 
-This module allows the user to load a sample and, based on a few settings, it overlays the sample on the output buffer the chosen number of times. I chose initially to offer this as a free module and plan to make the code for this public soon. More development details [here](about:blank).
+This module allows the user to load a sample and, based on a few settings, it overlays the sample on the output buffer the chosen number of times. More development details [here](about:blank).
 
 [Sample Swarm on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-sample-swarm)
 
 -----
 
+## Other Notable Projects
 
+### capstone - clientserver
 
-
-
-
-
-
-
-## Other Projects
-
-### capstone projects?
+### capstone - hash table
 
 ### android eportfolio?
 
-### rev engineering (maybe with lc3 too?)
+### rev engineering project (maybe with lc3 too?)
 
-(that's probably enough)
+-----
 
+## Other Repositories
 
+OpenGL spoon (need to add code to github)
 
-## overview of rest of github
+Python - genetic algorithm, pyatzee
 
-(quick rundown of other interesting projects - even if unfinished)
+ruby - cliserverbrowser, mergesort
 
-spoon.cpp?
-processing audio things
-gen algorithms
-ga-py?
-pyatzee
-pythonga
-ruby - cliserverbrowser
-ruby - mergesort
-js- lightsout snake memory terrarium
+js- lightsout, snake, memory, terrarium
 
 
 
