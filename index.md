@@ -78,7 +78,9 @@ Some notable nuggets of wisdom earned through this project:
 - Nothing in development ever goes smoothly, and sometimes for silly oversights: I had many issues initially with trying to get the index.html page to actually communicate with the Bottle.py server I had running locally. I was getting error messages related to Cross Origin Resource Sharing, which I was vaguely familiar with from prior web experience, but I didn’t understand how it applied to my situation. Then I realized, on my machine, I was running the server on “localhost” but loading the HTML file directly from my C drive, which the browser interpreted as different origins (thus leading to a CORS error). From here, I just had to figure out how to statically serve files directly from Bottle, so that the index.html would also come from the same host, and this issue would be resolved. Through this, I was able to exercise problem solving and research skills to resolve my issue, and get a deeper understanding of web programming in the process.
 - Collaboration makes complex software possible. Given a lot of time, I could eventually reach my ideal, or close enough, but for such a software stack to be fully functional, user friendly, and perhaps most of all secure, a team would be better able to achieve this as each could focus on different aspects: back end, front end, UI/UX, visual design, testing, security, etc. As a solo developer within very limited time constraints, I could really only hope to lay the groundwork for the ideal concept I had, enacting core functionality – but through well-formatted and commented code, as well as helpful git commit messages with small and frequent commits, I would hope to pave the way for others to more easily find their way when contributing to my base code.
 
-### Other Notable Projects
+-----
+
+## Miscellaneous Projects
 
 [WetSpec and Hash Table](https://github.com/ymerejsasnak/wetspec-script)
 Next we have the second artifact, a script for pulling data from a RaspberryPi with attached GrovePi, and a hash table for storing the data for quick lookup:
@@ -95,36 +97,32 @@ In the end, this piece of the project taught me a lot, but in ways that initiall
 
 ![Performance Screenshot](https://ymerejsasnak.github.io/perfpic.png)
 
+-----
 
-
-
-https://github.com/ymerejsasnak/ePortfolio
-
+[Android ePortfolio](https://github.com/ymerejsasnak/ePortfolio)
 
 <<<OpenGL spoon (need to add code to github)>>>
 
-
-https://github.com/ymerejsasnak/lc3_vm
 <<<add rev eng project too??>>>
 
-https://github.com/ymerejsasnak/THE-MAZE
+[LC-3 Virtual Machine](https://github.com/ymerejsasnak/lc3_vm)
 
-https://github.com/ymerejsasnak/python-ga
+[Python Maze Game](https://github.com/ymerejsasnak/THE-MAZE)
 
+[Python Genetic Algorithm](https://github.com/ymerejsasnak/python-ga)
 
-https://github.com/ymerejsasnak/cli-web-server-and-browser
+[Browser Terrarium Simulation](https://github.com/ymerejsasnak/terrarium)
 
+[Browser Memory Game](https://github.com/ymerejsasnak/memory-game)
 
-https://github.com/ymerejsasnak/mergesort
+[Browser Snake-Like Game](https://github.com/ymerejsasnak/snake)
 
+[Browser Lights Out Game](https://github.com/ymerejsasnak/lights-out)
 
-https://github.com/ymerejsasnak/terrarium
-https://github.com/ymerejsasnak/memory-game
-https://github.com/ymerejsasnak/snake
-https://github.com/ymerejsasnak/lights-out
+[Ruby CLI Web Server and Browser](https://github.com/ymerejsasnak/cli-web-server-and-browser)
 
-
----
+[Ruby Mergesort](https://github.com/ymerejsasnak/mergesort)
+-----
 
 
 
