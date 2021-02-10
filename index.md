@@ -101,7 +101,7 @@ In the end, this piece of the project taught me a lot, but in ways that initiall
 
 [Android ePortfolio](https://github.com/ymerejsasnak/ePortfolio)
 
-<<<OpenGL spoon (need to add code to github)>>>
+[OpenGL Spoon](https://github.com/ymerejsasnak/OpenGLSpoon)
 
 [Assembly to C conversion](https://github.com/ymerejsasnak/ymerejsasnak.github.io/blob/master/assemblyToC.txt)
 
