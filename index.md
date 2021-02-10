@@ -78,14 +78,11 @@ Some notable nuggets of wisdom earned through this project:
 - Nothing in development ever goes smoothly, and sometimes for silly oversights: I had many issues initially with trying to get the index.html page to actually communicate with the Bottle.py server I had running locally. I was getting error messages related to Cross Origin Resource Sharing, which I was vaguely familiar with from prior web experience, but I didn’t understand how it applied to my situation. Then I realized, on my machine, I was running the server on “localhost” but loading the HTML file directly from my C drive, which the browser interpreted as different origins (thus leading to a CORS error). From here, I just had to figure out how to statically serve files directly from Bottle, so that the index.html would also come from the same host, and this issue would be resolved. Through this, I was able to exercise problem solving and research skills to resolve my issue, and get a deeper understanding of web programming in the process.
 - Collaboration makes complex software possible. Given a lot of time, I could eventually reach my ideal, or close enough, but for such a software stack to be fully functional, user friendly, and perhaps most of all secure, a team would be better able to achieve this as each could focus on different aspects: back end, front end, UI/UX, visual design, testing, security, etc. As a solo developer within very limited time constraints, I could really only hope to lay the groundwork for the ideal concept I had, enacting core functionality – but through well-formatted and commented code, as well as helpful git commit messages with small and frequent commits, I would hope to pave the way for others to more easily find their way when contributing to my base code.
 
-### Hash Table
-
-(needs to be changed  A LOT -- hash table is okish but usage makes no sense given that time readings are made in order (i think? binary search would be fine then))
-
-Next we have the second artifact, a script for pulling data from a RaspberryPi with attached GrovePi, and a hash table for storing the data for quick lookup:
+### Other Notable Projects
 
 [WetSpec and Hash Table](https://github.com/ymerejsasnak/wetspec-script)
-
+Next we have the second artifact, a script for pulling data from a RaspberryPi with attached GrovePi, and a hash table for storing the data for quick lookup:
+(needs to be changed  A LOT -- hash table is okish but usage makes no sense given that time readings are made in order (i think? binary search would be fine then))
 And again, a narrative describing the piece and the process:
 
 To fulfill the second category of the ePortfolio, which is centered on data structures and algorithms, I have chosen to add a hash table to my Emerging Systems final project. The original artifact is a script for gathering weather data using a Raspberry Pi and Grove Pi attachment with sensors. The project is simple in that its main function is to periodically record values for temperature and humidity from the attached sensors. These values are then stored in a list and written to a JSON file. I had always felt that the data storage aspect could be improved upon and so decided to implement a simple hash table in which to store the values instead (which again could easily be formated in JSON if necessary).
@@ -100,24 +97,31 @@ In the end, this piece of the project taught me a lot, but in ways that initiall
 
 
 
-### android eportfolio?
 
-### rev engineering project (maybe with lc3 too?)
+https://github.com/ymerejsasnak/ePortfolio
 
------
 
-## Other Repositories
+<<<OpenGL spoon (need to add code to github)>>>
 
-hash table
 
-OpenGL spoon (need to add code to github)
+https://github.com/ymerejsasnak/lc3_vm
+<<<add rev eng project too??>>>
 
-Python - genetic algorithm, pyatzee
+https://github.com/ymerejsasnak/THE-MAZE
 
-ruby - cliserverbrowser, mergesort
+https://github.com/ymerejsasnak/python-ga
 
-js- lightsout, snake, memory, terrarium
 
+https://github.com/ymerejsasnak/cli-web-server-and-browser
+
+
+https://github.com/ymerejsasnak/mergesort
+
+
+https://github.com/ymerejsasnak/terrarium
+https://github.com/ymerejsasnak/memory-game
+https://github.com/ymerejsasnak/snake
+https://github.com/ymerejsasnak/lights-out
 
 
 ---
