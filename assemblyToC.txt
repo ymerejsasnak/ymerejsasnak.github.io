@@ -1,0 +1,295 @@
+Binary to Assembly Conversion
+
+
+
+***Function ReadUserInfo***
+
+   <+0>:     push   %rbp
+   <+1>:     mov    %rsp,%rbp
+Function prologue (push base stack, set stack pointer to base stack)
+
+   <+4>:     mov    $0x400858,%edi
+   <+9>:     callq  0x4004b0 <puts@plt>
+Display (puts) “Enter name:”
+
+   <+14>:    mov    $0x6010d0,%esi
+   <+19>:    mov    $0x400864,%edi
+   <+24>:    mov    $0x0,%eax
+   <+29>:    callq  0x4004f0 <__isoc99_scanf@plt>
+Call scanf to get input string using “%s” and store in name
+
+   <+34>:    mov    $0x400867,%edi
+   <+39>:    callq  0x4004b0 <puts@plt>
+Display (puts) “Enter password:”
+
+   <+44>:    mov    $0x6010e4,%esi
+   <+49>:    mov    $0x400877,%edi
+   <+54>:    mov    $0x0,%eax
+   <+59>:    callq  0x4004f0 <__isoc99_scanf@plt>
+Get user input number using format string “%d” and store in password
+
+   <+64>:    pop    %rbp
+   <+65>:    retq  
+Function epilogue (pop stack and return)
+
+
+
+***Function CheckUserPermissionAccess***
+
+   <+0>:     push   %rbp
+   <+1>:     mov    %rsp,%rbp
+Function prologue
+
+   <+4>:     mov    0x200aab(%rip),%eax        # 0x6010e4 <password>
+Copy user password attempt into %eax
+
+   <+10>:    cmp    $0x7b,%eax
+   <+13>:    jne    0x400645 <CheckUserPermissionAccess+22>
+If password doesn’t equal 123 (0x7b), jump to +22
+
+   <+15>:    mov    $0x1,%eax
+   <+20>:    jmp    0x40064a <CheckUserPermissionAccess+27>
+Else set return value (%eax) to 1, jump to +27
+
+   <+22>:    mov    $0x0,%eax
+Set return value to 0
+
+   <+27>:    pop    %rbp
+   <+28>:    retq 
+Function epilogue
+
+
+
+***Function DisplayStudentInformation***
+
+   <+0>:     push   %rbp
+   <+1>:     mov    %rsp,%rbp
+Function prologue
+
+   <+4>:     movl   $0x0,0x200a92(%rip)        # 0x6010ec <i>
+   <+14>:    jmp    0x4006ad <DisplayStudentInformation+97>
+Init i with 0 and jump to +97
+
+   <+16>:    mov    0x200a8a(%rip),%eax        # 0x6010ec <i>
+   <+22>:    cltq   
+   <+24>:    movzbl 0x601060(%rax),%eax
+   <+31>:    movsbl %al,%ecx
+Use i as index to grades array (0x601060), retrieving grades[i]
+   
+   <+34>:    mov    0x200a78(%rip),%eax        # 0x6010ec <i>
+   <+40>:    movslq %eax,%rdx
+   <+43>:    mov    %rdx,%rax
+   <+46>:    shl    $0x2,%rax
+   <+50>:    add    %rdx,%rax
+   <+53>:    add    %rax,%rax
+   <+56>:    add    $0x601080,%rax
+Use i as index to students array (0x601080), retrieving students[i]
+
+   <+62>:    mov    %ecx,%edx
+   <+64>:    mov    %rax,%rsi
+   <+67>:    mov    $0x40087a,%edi
+   <+72>:    mov    $0x0,%eax
+   <+77>:    callq  0x4004c0 <printf@plt>
+Call printf using “%s” and grades[i] and students[i] as arguments
+
+   <+82>:    mov    0x200a48(%rip),%eax        # 0x6010ec <i>
+   <+88>:    add    $0x1,%eax
+   <+91>:    mov    %eax,0x200a3f(%rip)        # 0x6010ec <i>
+Increment i (copy to eax, add 1, copy back)
+
+   <+97>:    mov    0x200a39(%rip),%eax        # 0x6010ec <i>
+   <+103>:   cmp    $0x4,%eax
+   <+106>:   jle    0x40065c <DisplayStudentInformation+16>
+If i is less than or equal to 4, jump to +16
+
+   <+108>:   pop    %rbp
+   <+109>:   retq 
+Function epilogue
+
+
+
+*****Function main*****
+
+   <+0>:     push   %rbp
+   <+1>:     mov    %rsp,%rbp
+   <+4>:     sub    $0x10,%rsp
+Function prologue
+
+   <+8>:     mov    %edi,-0x4(%rbp)
+   <+11>:    mov    %rsi,-0x10(%rbp)
+   <+15>:    mov    $0x0,%eax
+   <+20>:    callq  0x4005ed <ReadUserInfo>
+Prepare for and call ReadUserInfo
+
+   <+25>:    mov    $0x0,%eax
+   <+30>:    callq  0x40062f <CheckUserPermissionAccess>
+Set eax to 0 and call CheckUserPermissionAccess
+
+   <+35>:    cmp    $0x1,%eax
+   <+38>:    jne    0x4007be <main+260>
+If check function does not return a 1 (wrong password), jump to +260
+
+   <+44>:    mov    $0x400888,%edi
+   <+49>:    callq  0x4004b0 <puts@plt>
+Otherwise, puts “Welcome professor. Below are all student grades”
+
+   <+54>:    mov    $0x0,%eax
+   <+59>:    callq  0x40064c <DisplayStudentInformation>
+Clear eax and call DisplayStudentInformation
+
+   <+64>:    mov    $0x4008b8,%edi
+   <+69>:    callq  0x4004b0 <puts@plt>
+Puts “Adjust grades for students?”
+
+   <+74>:    mov    $0x6010e8,%esi
+   <+79>:    mov    $0x400864,%edi
+   <+84>:    mov    $0x0,%eax
+   <+89>:    callq  0x4004f0 <__isoc99_scanf@plt>
+Get user input for choice by calling scanf with %s format string
+
+   <+94>:    movzbl 0x2009c9(%rip),%eax        # 0x6010e8 <choice>
+   <+101>:   cmp    $0x59,%al
+   <+103>:   jne    0x4007be <main+260>
+0x59 is hex value of “Y” and %al is lowest 8 bits (char) of eax
+
+   <+109>:   mov    $0x4008d8,%edi
+   <+114>:   mov    $0x0,%eax
+   <+119>:   callq  0x4004c0 <printf@plt>
+“Enter the GPA for students one at a time.”
+
+   <+124>:   movl   $0x0,0x2009ac(%rip)        # 0x6010ec <i>
+   <+134>:   jmp    0x40079f <main+229>
+Init i to 0 and jump to +229
+
+   <+136>:   mov    0x2009a4(%rip),%eax        # 0x6010ec <i>
+   <+142>:   movslq %eax,%rdx
+   <+145>:   mov    %rdx,%rax
+   <+148>:   shl    $0x2,%rax
+   <+152>:   add    %rdx,%rax
+   <+155>:   add    %rax,%rax
+   <+158>:   add    $0x601080,%rax
+Use i as index to students array (0x601080), retrieving students[i]
+
+   <+164>:   mov    %rax,%rsi
+   <+167>:   mov    $0x400864,%edi
+   <+172>:   mov    $0x0,%eax
+   <+177>:   callq  0x4004c0 <printf@plt>
+Formatted print using “%s” as format and students[i] as argument
+
+   <+182>:   mov    0x200976(%rip),%eax        # 0x6010ec <i>
+   <+188>:   cltq   
+   <+190>:   add    $0x601060,%rax
+   <+196>:   mov    %rax,%rsi
+Use index i to get address of that item in grades array (0x601060)
+
+   <+199>:   mov    $0x400864,%edi
+   <+204>:   mov    $0x0,%eax
+   <+209>:   callq  0x4004f0 <__isoc99_scanf@plt>
+Call scanf with “%s” and address of grades[i]
+
+   <+214>:   mov    0x200956(%rip),%eax        # 0x6010ec <i>
+   <+220>:   add    $0x1,%eax
+   <+223>:   mov    %eax,0x20094d(%rip)        # 0x6010ec <i>
+Increment i (using eax)
+
+   <+229>:   mov    0x200947(%rip),%eax        # 0x6010ec <i>
+   <+235>:   cmp    $0x4,%eax
+   <+238>:   jle    0x400742 <main+136>
+If i is less or equal to 4, jump to +136
+
+   <+240>:   mov    $0x400908,%edi
+   <+245>:   callq  0x4004b0 <puts@plt>
+“You have successfully updated class grades.”
+
+   <+250>:   mov    $0x0,%eax
+   <+255>:   callq  0x40064c <DisplayStudentInformation>
+Zero eax and call DisplayStudentInformation again
+
+   <+260>:   mov    $0x0,%eax
+   <+265>:   leaveq 
+   <+266>:   retq
+End program, return 0 
+
+
+********************************************************************
+
+
+Assembly to C Conversion
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+// Global variables
+char name;
+int password;
+char choice;
+int i;
+
+char * students[5] = {"Jim", "Tom", "Ben", "Alice", "Ruby"};
+char grades[5][1] = {"A", "C", "C", "D", "F"};
+
+
+// Function to get name and password input from user
+void ReadUserInfo()
+{
+  puts("Enter name:");
+  scanf("%s", &name);
+  puts("Enter password:");
+  scanf("%d", &password);  
+}
+
+
+// Function to test if password is correct
+int CheckUserPermissionAccess()
+{
+  if (password == 123) {
+    return 1;
+  }
+  else {
+    return 0;
+  }
+}
+
+
+// Function to list each student name and grade
+void DisplayStudentInformation()
+{
+  for (i = 0; i <= 4; i++) {
+    printf("%s %c\n", students[i], grades[i][0]);
+  }
+}
+
+
+// Main - read input, check access, display students, adjust grades
+int main()
+{
+  ReadUserInfo();
+  
+  // only run if password is correct
+  if (CheckUserPermissionAccess()) {
+    
+    puts("Welcome professor. Below are all student grades");
+    DisplayStudentInformation();
+    
+    puts("Adjust grades for students?");
+    scanf("%s", &choice);
+    
+    if (choice == 'Y')
+    {
+      puts("Enter the GPA for students one at a time.");
+    
+	 // input loop for entering student grades
+      for (i = 0; i <= 4; i++) {
+        printf("%s", students[i]);
+         scanf("%s", grades[i]);       
+      }
+      
+      puts("You have successfully updated class grades. The grades are now as follows:");
+      DisplayStudentInformation();
+      
+    }
+  }
+  
+  return 0;
+}
