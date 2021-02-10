@@ -103,7 +103,7 @@ In the end, this piece of the project taught me a lot, but in ways that initiall
 
 <<<OpenGL spoon (need to add code to github)>>>
 
-<<<add rev eng project too??>>>
+[Assembly to C conversion](https://github.com/ymerejsasnak/ymerejsasnak.github.io/blob/master/assemblyToC.txt)
 
 [LC-3 Virtual Machine](https://github.com/ymerejsasnak/lc3_vm)
 
