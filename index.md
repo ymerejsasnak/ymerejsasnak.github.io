@@ -80,6 +80,8 @@ Some notable nuggets of wisdom earned through this project:
 
 -----
 
+### Data Readings and Hash Table
+
 [WetSpec and Hash Table](https://github.com/ymerejsasnak/wetspec-script)
 
 Another school project. It started as a script for pulling weather data from a Raspberry Pi with attached Grove Pi. I later implemented a hash table to store the weather data and allow quick lookup based on the date/time of the reading. This was mainly a programming exercise - a professional script would of course use a pre-built data structure, or more likely use a full-fledged database for storage. After performing rough performance tests, I found my simple hash table to be much more efficient than a linear search, but still less efficient than Python's built-in dictionary type. Given that date/time readings would necessarily be made in order, testing against a binary search would have been informative as well.
@@ -91,6 +93,8 @@ Here is a screenshot showing a printout of some stats and results of running my 
 ![Performance Screenshot](https://ymerejsasnak.github.io/perfpic.png)
 
 -----
+
+### Android App
 
 [Android ePortfolio](https://github.com/ymerejsasnak/ePortfolio)
 
@@ -111,14 +115,14 @@ Actually pretty cool maze game...though lacking lots of polish:  [Python Maze Ga
 First attempt at implmenting a simple genetic algorithm:  [Python Genetic Algorithm](https://github.com/ymerejsasnak/python-ga)
 
 Old Javascript Browser Games:
-[Browser Terrarium Simulation](https://github.com/ymerejsasnak/terrarium)
-[Browser Memory Game](https://github.com/ymerejsasnak/memory-game)
-[Browser Snake-Like Game](https://github.com/ymerejsasnak/snake)
-[Browser Lights Out Game](https://github.com/ymerejsasnak/lights-out)
+- [Browser Terrarium Simulation](https://github.com/ymerejsasnak/terrarium)
+- [Browser Memory Game](https://github.com/ymerejsasnak/memory-game)
+- [Browser Snake-Like Game](https://github.com/ymerejsasnak/snake)
+- [Browser Lights Out Game](https://github.com/ymerejsasnak/lights-out)
 
 A couple interesting Ruby things:
-[Ruby CLI Web Server and Browser](https://github.com/ymerejsasnak/cli-web-server-and-browser)
-[Ruby Mergesort](https://github.com/ymerejsasnak/mergesort)
+- [Ruby CLI Web Server and Browser](https://github.com/ymerejsasnak/cli-web-server-and-browser)
+- [Ruby Mergesort](https://github.com/ymerejsasnak/mergesort)
 
 -----
 
