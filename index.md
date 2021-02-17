@@ -80,20 +80,13 @@ Some notable nuggets of wisdom earned through this project:
 
 -----
 
-## Miscellaneous Projects
-
 [WetSpec and Hash Table](https://github.com/ymerejsasnak/wetspec-script)
-Next we have the second artifact, a script for pulling data from a RaspberryPi with attached GrovePi, and a hash table for storing the data for quick lookup:
-(needs to be changed  A LOT -- hash table is okish but usage makes no sense given that time readings are made in order (i think? binary search would be fine then))
-And again, a narrative describing the piece and the process:
 
-To fulfill the second category of the ePortfolio, which is centered on data structures and algorithms, I have chosen to add a hash table to my Emerging Systems final project. The original artifact is a script for gathering weather data using a Raspberry Pi and Grove Pi attachment with sensors. The project is simple in that its main function is to periodically record values for temperature and humidity from the attached sensors. These values are then stored in a list and written to a JSON file. I had always felt that the data storage aspect could be improved upon and so decided to implement a simple hash table in which to store the values instead (which again could easily be formated in JSON if necessary).
+Another school project. It started as a script for pulling weather data from a Raspberry Pi with attached Grove Pi. I later implemented a hash table to store the weather data and allow quick lookup based on the date/time of the reading. This was mainly a programming exercise - a professional script would of course use a pre-built data structure, or more likely use a full-fledged database for storage. After performing rough performance tests, I found my simple hash table to be much more efficient than a linear search, but still less efficient than Python's built-in dictionary type. Given that date/time readings would necessarily be made in order, testing against a binary search would have been informative as well.
 
-For this category, I initially had trouble coming up with an idea that didn’t feel contrived or redundant. In the end, I settled on the hash table idea because I felt it would be an interesting challenge, an opportunity to build a useful data structure from scratch, and to weigh all the various algorithmic and storage considerations that come along with that. Of course, in a real world scenario, it would be a lot easier to just use a built-in structure – such as Python’s dictionary, or if more complex data storage is desired, a full-fledged database – but only through creating my own hash table and thinking through the different considerations and trade-offs did I actually feel I was exercising my knowledge and abilities. With my hash table, the data can now be looked up by a specific date and time with much better performance than simply linearly searching through a list of all items. Compared to the built-in Python dictionary, however, my hash table is almost 10 times slower. Still, given that mine was created in a short period of time while the Python data structure is something that’s been improved and fine-tuned over many versions, I consider that a success.
+The hashing function was simple: performing a modulus operation of a numerical representation of the key by the size of the table. Because of this simplicity of the hash function, the table size became more important and really needed to be a prime-valued size to help spread out the entries. I toyed with non-prime tables since they would be easier to resize, but ultimately found them to have far too many collisions. Next, my initial plan had been to resize the table when it reached about 75% capacity, but this proved to be too high given that my collision resolution strategy was straightforward linear probing (inserting the data into the first non-colliding index) so I settled for about 50% capacity. From this we come to the most glaring example of a difficult trade-off: I can perform over 10,000 random look-ups on my hash table in a fraction of a second (based on my simple performance tests) but at the cost of memory – at any time there are empty spaces equaling anywhere from about 1 to 3 times the number of actual data points.
 
-This enhancement met the course objectives I expected it to. Its primary purpose, as far as objectives were concerned, was to showcase my problem solving ability, my ability to think algorithmically and apply computer science practices, and also my ability to evaluate the various trade-offs, such as efficiency or memory usage, one must consider in any solution. But this enhancement, as any, also allows for further demonstration of coding best practices – whether for readability and collaboration or for security. Also, it provides yet another opportunity for showing my ability to communicate in writing, in both a descriptive and analytical fashion.
-
-In the end, this piece of the project taught me a lot, but in ways that initially surprised me. The actual implementation of the core structure of the hash table class and its methods was much easier than I had anticipated, but fine-tuning its operation proved to be very challenging. The date/times used as keys were difficult to hash effectively because they were generally regularly spaced values (each was ‘rounded,’ so to speak, to the nearest half hour mark). I tried various tricks to make the values hash more randomly, but nothing worked to my liking, so I returned to my original plan, which was just performing a modulus operation of a numerical representation of the key by the size of the table. Because of this simplicity of the hash function, the table size became more important and really needed to be a prime-valued size to help spread out the entries. I toyed with non-prime tables since they would be easier to resize, but ultimately found them to have far too many collisions. Next, my initial plan had been to resize the table when it reached about 75% capacity, but this proved to be too high given that my collision resolution strategy was straightforward linear probing (inserting the data into the first non-colliding index) so I settled for about 50% capacity. From this we come to the most glaring example of a difficult trade-off: I can perform over 10,000 random look-ups on my hash table in a fraction of a second (based on my simple performance tests) but at the cost of memory – at any time there are empty spaces equaling anywhere from about 1 to 3 times the number of actual data points.
+Here is a screenshot showing a printout of some stats and results of running my tests twice:
 
 ![Performance Screenshot](https://ymerejsasnak.github.io/perfpic.png)
 
@@ -101,44 +94,32 @@ In the end, this piece of the project taught me a lot, but in ways that initiall
 
 [Android ePortfolio](https://github.com/ymerejsasnak/ePortfolio)
 
-[OpenGL Spoon](https://github.com/ymerejsasnak/OpenGLSpoon)
+Yet another school project. This is a functional, though ugly and SO FAR from perfect, Android ePortfolio app that allows users to add text, images, sounds, etc and store them in an SQLite database and then view and/or play them back. 
 
-[Assembly to C conversion](https://github.com/ymerejsasnak/ymerejsasnak.github.io/blob/master/assemblyToC.txt)
+-----
 
-[LC-3 Virtual Machine](https://github.com/ymerejsasnak/lc3_vm)
+## Miscellaneous Projects
 
-[Python Maze Game](https://github.com/ymerejsasnak/THE-MAZE)
+C++ and GLSL code to render a pretty bad-looking wooden spoon:  [OpenGL Spoon](https://github.com/ymerejsasnak/OpenGLSpoon)  
 
-[Python Genetic Algorithm](https://github.com/ymerejsasnak/python-ga)
+Part of a reverse engineering project. Assembly to C translation provided here as a text file: [Assembly to C conversion](https://github.com/ymerejsasnak/ymerejsasnak.github.io/blob/master/assemblyToC.txt)
 
+Unfinished implementation of an [LC-3](https://en.wikipedia.org/wiki/Little_Computer_3) virtual machine in C:  [LC-3 Virtual Machine](https://github.com/ymerejsasnak/lc3_vm)
+
+Actually pretty cool maze game...though lacking lots of polish:  [Python Maze Game](https://github.com/ymerejsasnak/THE-MAZE)
+
+First attempt at implmenting a simple genetic algorithm:  [Python Genetic Algorithm](https://github.com/ymerejsasnak/python-ga)
+
+Old Javascript Browser Games:
 [Browser Terrarium Simulation](https://github.com/ymerejsasnak/terrarium)
-
 [Browser Memory Game](https://github.com/ymerejsasnak/memory-game)
-
 [Browser Snake-Like Game](https://github.com/ymerejsasnak/snake)
-
 [Browser Lights Out Game](https://github.com/ymerejsasnak/lights-out)
 
+A couple interesting Ruby things:
 [Ruby CLI Web Server and Browser](https://github.com/ymerejsasnak/cli-web-server-and-browser)
-
 [Ruby Mergesort](https://github.com/ymerejsasnak/mergesort)
 
 -----
 
-
-
-decent text to keep???
-
- Most significant systems or components are too complex for a single person to realistically create and support alone, thus collaboration is key. The only way for people to collaborate successfully on a project is to help each other out, to properly outline requirements and carefully implement designs, to use coding best practices such as good naming conventions and formatting and commenting, to test code before submitting it for review, to graciously accept constructive criticism, to accurately log security issues, to provide audience appropriate documentation – in a single word, at every step in the process, it’s all about communication.
-
-
-
- Finally, these artifacts, all of them, are flawed. It’s important to note that I am well aware of these flaws – the areas where security is weak or features are incomplete or code is a horrid mess – and I am able to communicate this understanding to others, and I am able to, given time, address these flaws. Still, software, as a product of the human mind – a beautiful and powerful and incredibly flawed thing in itself – this is almost inevitable. As we wrestle against the intricate requirements of complex systems, nothing is ever finished, everything is a work in progress, but so is life.
-
-
-
-
-
-
-
-
+[contact me](mailto:Jeremy.JK.Kansas@gmail.com)
