@@ -94,6 +94,12 @@ Here is a screenshot showing a printout of some stats and results of running my 
 
 -----
 
+### Reverse Engineering
+
+This is part of a reverse engineering project in which I had to disassemble a binary, annotate the assembly, and convert it to C code. There is currently no repo for this, but the assembly and C code are temporarily provided here as a text file: [Assembly to C conversion](https://github.com/ymerejsasnak/ymerejsasnak.github.io/blob/master/assemblyToC.txt)
+
+-----
+
 ### Android App
 
 [Android ePortfolio](https://github.com/ymerejsasnak/ePortfolio)
@@ -105,8 +111,6 @@ Yet another school project. This is a functional, though ugly and SO FAR from pe
 ## Miscellaneous Projects
 
 C++ and GLSL code to render a pretty bad-looking wooden spoon:  [OpenGL Spoon](https://github.com/ymerejsasnak/OpenGLSpoon)  
-
-Part of a reverse engineering project. Assembly to C translation provided here as a text file: [Assembly to C conversion](https://github.com/ymerejsasnak/ymerejsasnak.github.io/blob/master/assemblyToC.txt)
 
 Unfinished implementation of an [LC-3](https://en.wikipedia.org/wiki/Little_Computer_3) virtual machine in C:  [LC-3 Virtual Machine](https://github.com/ymerejsasnak/lc3_vm)
 
