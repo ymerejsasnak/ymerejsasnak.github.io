@@ -25,7 +25,7 @@ Beyond that, the experience with these modules has given me further practice. I 
 
 <img src="https://ymerejsasnak.github.io/rsamp.png" height="300">
 
-This module allows the user to load up to 8 audio samples and then randomly trigger them, while also adding randomized variation to a number of parameters including volume, pitch, and start offset. More development details [here](sampler.md).
+This module allows the user to load up to 8 audio samples and then randomly trigger them, while also adding randomized variation to a number of parameters including volume, pitch, and start offset. More development details [~~here~~](sampler.md) (coming soon).
 
 [Random Sampler on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-random-sampler)
 
@@ -33,7 +33,7 @@ This module allows the user to load up to 8 audio samples and then randomly trig
 
 <img src="https://ymerejsasnak.github.io/scrubber.png" height="300">
 
-This module allows the user to load up an audio sample and control playback position with a control voltage. More development details [here](about:blank).
+This module allows the user to load up an audio sample and control playback position with a control voltage.
 
 [Sample Scrubber on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-sample-scrubber)
 
@@ -41,7 +41,7 @@ This module allows the user to load up an audio sample and control playback posi
 
 <img src="https://ymerejsasnak.github.io/cv2.png" height="300">
 
-This module allows the user to draw four different custom curves and read/output them in various ways to control any other parameters of other modules. A lot of options and random generation functions are included as well. More development details [here](about:blank).
+This module allows the user to draw four different custom curves and read/output them in various ways to control any other parameters of other modules. A lot of options and random generation functions are included as well.
 
 [CV Canvas on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-cv-canvas)
 
@@ -49,7 +49,7 @@ This module allows the user to draw four different custom curves and read/output
 
 <img src="https://ymerejsasnak.github.io/swarm1.png" height="300">
 
-This module allows the user to load a sample and, based on a few settings, it overlays the sample on the output buffer the chosen number of times. More development details [here](about:blank).
+This module allows the user to load a sample and, based on a few settings, it overlays the sample on the output buffer the chosen number of times.
 
 [Sample Swarm on the Cherry Audio store](https://store.cherryaudio.com/modules/jks-sample-swarm)
 
